@@ -1,0 +1,743 @@
+    <div class="CurrencyArchivePage_Placer">
+                <table class="CurrencyArchivePage_Table LightOnRow">
+                    <thead>
+                        <tr>
+                            <th>Дата</th>
+                                <th class="CellBold">
+                                    1$
+                                </th>
+                                <th class="CellBold">
+                                    1€
+                                </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                <tr class="js-currarch-col-data" data-code="рб" style="">
+                                    <td class="CellBold">01.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="рб" style="">
+                                                    <span class="RateDifference _rate1"></span>
+                                                    82,1831
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="рб" style="">
+                                                    <span class="RateDifference _rate1"></span>
+                                                    93,7380
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                    <td class="CellBold">01.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    488,0000
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    557,0000
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="BY" style="display:none">
+                                    <td class="CellBold">01.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="BY" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    2,9680
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="BY" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    3,3827
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="DR" style="display:none">
+                                    <td class="CellBold">01.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="DR" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    375,2478
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="DR" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    429,9568
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                    <td class="CellBold">01.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    12189,4000
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    13961,9300
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                    <td class="CellBold">01.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    1,7060
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    1,9600
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="рб" style="">
+                                    <td class="CellBold">02.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="рб" style="">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    82,1785
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="рб" style="">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    93,6342
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                    <td class="CellBold">02.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    486,0000
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    554,0000
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="BY" style="display:none">
+                                    <td class="CellBold">02.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="BY" style="display:none">
+                                                    <span class="RateDifference _rate1"></span>
+                                                    2,9701
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="BY" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    3,3824
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="DR" style="display:none">
+                                    <td class="CellBold">02.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="DR" style="display:none">
+                                                    <span class="RateDifference _rate1"></span>
+                                                    375,4110
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="DR" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    429,9568
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                    <td class="CellBold">02.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    12113,2500
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    13863,7400
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                    <td class="CellBold">02.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    1,7060
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    1,9600
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="рб" style="">
+                                    <td class="CellBold">03.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="рб" style="">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    81,8258
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="рб" style="">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    93,1422
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                    <td class="CellBold">03.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    481,0000
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    549,0000
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="BY" style="display:none">
+                                    <td class="CellBold">03.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="BY" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    2,9701
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="BY" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    3,3824
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="DR" style="display:none">
+                                    <td class="CellBold">03.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="DR" style="display:none">
+                                                    <span class="RateDifference _rate1"></span>
+                                                    375,5640
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="DR" style="display:none">
+                                                    <span class="RateDifference _rate1"></span>
+                                                    430,5820
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                    <td class="CellBold">03.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    12088,3000
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    13860,6900
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                    <td class="CellBold">03.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    1,7060
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                                    <span class="RateDifference _rate1"></span>
+                                                    1,9700
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="рб" style="">
+                                    <td class="CellBold">04.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="рб" style="">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    81,0877
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="рб" style="">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    92,4319
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                    <td class="CellBold">04.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    479,0000
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    548,0000
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="BY" style="display:none">
+                                    <td class="CellBold">04.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="BY" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    2,9701
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="BY" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    3,3824
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="DR" style="display:none">
+                                    <td class="CellBold">04.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="DR" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    375,1458
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="DR" style="display:none">
+                                                    <span class="RateDifference _rate1"></span>
+                                                    431,5353
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                    <td class="CellBold">04.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    12088,3000
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    13860,6900
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                    <td class="CellBold">04.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    1,7060
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    1,9700
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="рб" style="">
+                                    <td class="CellBold">05.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="рб" style="">
+                                                    <span class="RateDifference "></span>
+                                                    81,0877
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="рб" style="">
+                                                    <span class="RateDifference "></span>
+                                                    92,4319
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                    <td class="CellBold">05.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    479,0000
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    548,0000
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="BY" style="display:none">
+                                    <td class="CellBold">05.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="BY" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    2,9701
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="BY" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    3,3824
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="DR" style="display:none">
+                                    <td class="CellBold">05.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="DR" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    375,1458
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="DR" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    431,5353
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                    <td class="CellBold">05.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    12088,3000
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    13860,6900
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                    <td class="CellBold">05.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    1,7060
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    1,9700
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="рб" style="">
+                                    <td class="CellBold">06.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="рб" style="">
+                                                    <span class="RateDifference "></span>
+                                                    81,0877
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="рб" style="">
+                                                    <span class="RateDifference "></span>
+                                                    92,4319
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                    <td class="CellBold">06.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    479,0000
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    548,0000
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="BY" style="display:none">
+                                    <td class="CellBold">06.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="BY" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    2,9689
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="BY" style="display:none">
+                                                    <span class="RateDifference _rate1"></span>
+                                                    3,3885
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="DR" style="display:none">
+                                    <td class="CellBold">06.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="DR" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    375,1458
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="DR" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    431,5353
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                    <td class="CellBold">06.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                                    <span class="RateDifference _rate1"></span>
+                                                    12153,5000
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                                    <span class="RateDifference _rate1"></span>
+                                                    13974,5500
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                    <td class="CellBold">06.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    1,7060
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    1,9600
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="рб" style="">
+                                    <td class="CellBold">07.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="рб" style="">
+                                                    <span class="RateDifference _rate1"></span>
+                                                    81,8680
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="рб" style="">
+                                                    <span class="RateDifference _rate1"></span>
+                                                    93,7225
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                    <td class="CellBold">07.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    479,0000
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    548,0000
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="BY" style="display:none">
+                                    <td class="CellBold">07.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="BY" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    2,9679
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="BY" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    3,3876
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="DR" style="display:none">
+                                    <td class="CellBold">07.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="DR" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    374,8194
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="DR" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    430,1413
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                    <td class="CellBold">07.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                                    <span class="RateDifference _rate1"></span>
+                                                    12222,6800
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                                    <span class="RateDifference _rate1"></span>
+                                                    14019,7000
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                    <td class="CellBold">07.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    1,7060
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    1,9600
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="рб" style="">
+                                    <td class="CellBold">08.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="рб" style="">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    79,9321
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="рб" style="">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    91,2425
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                    <td class="CellBold">08.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    478,0000
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    547,0000
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="BY" style="display:none">
+                                    <td class="CellBold">08.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="BY" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    2,9299
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="BY" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    3,3471
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="DR" style="display:none">
+                                    <td class="CellBold">08.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="DR" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    374,8194
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="DR" style="display:none">
+                                                    <span class="RateDifference _rate1"></span>
+                                                    430,6333
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                    <td class="CellBold">08.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    12201,6400
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    14009,0400
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                    <td class="CellBold">08.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    1,7060
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    1,9600
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="рб" style="">
+                                    <td class="CellBold">09.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="рб" style="">
+                                                    <span class="RateDifference _rate1"></span>
+                                                    80,2227
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="рб" style="">
+                                                    <span class="RateDifference _rate1"></span>
+                                                    91,7187
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                    <td class="CellBold">09.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    475,0000
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    542,0000
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="BY" style="display:none">
+                                    <td class="CellBold">09.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="BY" style="display:none">
+                                                    <span class="RateDifference _rate1"></span>
+                                                    2,9338
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="BY" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    3,3456
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="DR" style="display:none">
+                                    <td class="CellBold">09.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="DR" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    374,6358
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="DR" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    429,4750
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                    <td class="CellBold">09.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    12184,8200
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    13965,2400
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                    <td class="CellBold">09.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    1,7060
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    1,9600
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="рб" style="">
+                                    <td class="CellBold">10.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="рб" style="">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    79,7265
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="рб" style="">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    90,9201
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                    <td class="CellBold">10.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    474,0000
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    542,0000
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="BY" style="display:none">
+                                    <td class="CellBold">10.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="BY" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    2,9236
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="BY" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    3,3415
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="DR" style="display:none">
+                                    <td class="CellBold">10.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="DR" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    374,4624
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="DR" style="display:none">
+                                                    <span class="RateDifference _rate1"></span>
+                                                    429,8030
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                    <td class="CellBold">10.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                                    <span class="RateDifference _rate1"></span>
+                                                    12192,3900
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                                    <span class="RateDifference _rate1"></span>
+                                                    14005,7800
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                    <td class="CellBold">10.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    1,7060
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    1,9600
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="рб" style="">
+                                    <td class="CellBold">11.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="рб" style="">
+                                                    <span class="RateDifference _rate1"></span>
+                                                    80,4979
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="рб" style="">
+                                                    <span class="RateDifference _rate1"></span>
+                                                    92,0494
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                    <td class="CellBold">11.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    472,0000
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="KZ" style="display:none">
+                                                    <span class="RateDifference _rate2"></span>
+                                                    539,0000
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="BY" style="display:none">
+                                    <td class="CellBold">11.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="BY" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    2,9236
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="BY" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    3,3415
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="DR" style="display:none">
+                                    <td class="CellBold">11.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="DR" style="display:none">
+                                                    <span class="RateDifference _rate1"></span>
+                                                    374,7276
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="DR" style="display:none">
+                                                    <span class="RateDifference _rate1"></span>
+                                                    430,5308
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                    <td class="CellBold">11.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    12192,3900
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="UZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    14005,7800
+                                                </td>
+                                </tr>
+                                <tr class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                    <td class="CellBold">11.07.2026</td>
+                                                <td class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    1,7060
+                                                </td>
+                                                <td class="js-currarch-col-data" data-code="AZ" style="display:none">
+                                                    <span class="RateDifference "></span>
+                                                    1,9600
+                                                </td>
+                                </tr>
+                    </tbody>
+                </table>
+    </div>
