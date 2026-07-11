@@ -1,0 +1,1 @@
+import{I as e,u as t,a}from"./Initializer-D0fN5fVA.js";function s(s){const o=document.getElementById("header-app");if(o){const r=e.InitSsr(s,void 0,o.dataset),i=JSON.parse(o.dataset.viewModel);t().setHeader(i.header);a().setState(i.userAuthorized,i.customerAccount),r.mount(o)}}export{s as i};

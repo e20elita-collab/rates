@@ -1,0 +1,1 @@
+const e=(e,n=window.location.href)=>{e=e.replace(/[\[\]]/g,"\\$&");const o=new RegExp(`[?&]${e}(=([^&#]*)|&|#|$)`,"i").exec(n);return o?o[2]?decodeURIComponent(o[2].replace(/\+/g," ")):"":null};export{e as g};
