@@ -1,0 +1,3036 @@
+Source: /tmp/rates-js/DcAKIYbj.js
+Size: 1601631 bytes
+
+====================================================================================================
+SEARCH: fetchCurrencyRate
+
+--- MATCH 1, position 223735 ---
+
+[0] = [N("path", {
+            fill: "currentColor",
+            d: "M18.07 10.32c-.19 0-.38-.07-.53-.22L12 4.56 6.46 10.1c-.29.29-.77.29-1.06 0a.754.754 0 0 1 0-1.06l6.07-6.07c.29-.29.77-.29 1.06 0l6.07 6.07c.29.29.29.77 0 1.06-.14.15-.34.22-.53.22"
+        }, null, -1), N("path", {
+            fill: "currentColor",
+            d: "M12 21.25c-.41 0-.75-.34-.75-.75V3.67c0-.41.34-.75.75-.75s.75.34.75.75V20.5c0 .41-.34.75-.75.75"
+        }, null, -1)])])
+    }
+}
+  , qa = e => new Promise(t => setTimeout(t, e))
+  , Za = j("ExchangeRate", () => {
+    const e = p([])
+      , t = p({
+        USD: [],
+        EUR: []
+    });
+    return {
+        currencyRates: e,
+        rateHistoryMap: t,
+        fetchCurrencyRate: async function() {
+            e.value = [];
+            const t = (new Date).toLocaleDateString("sv-SE")
+              , i = [];
+            if (!(typeof window > "u"))
+                return await Promise.all([2, 3].map(async e => {
+                    let s = 0
+                      , a = !1;
+                    for (; !a && s < 5; )
+                        try {
+                            const s = await zi({
+                                clientId: Ni.clientId,
+                                currencyFrom: 1,
+                                currencyTo: e,
+                                dateFrom: t,
+                                dateTo: t
+                            });
+                            i.push(s),
+                            a = !0
+                        } catch (r) {
+                            s++,
+                            s > 2 && await qa(300)
+                        }
+                }
+                )),
+                e.value = i.flatMap(e => e.currencyRates ?? []),
+                e.value
+        },
+        fetchCurrencyHistory: async function(e) {
+            if (t.value[e]?.length)
+                return;
+            const i = "USD" === e ? 2 : 3
+              , s = new Date;
+            s.setHours(0, 0, 0, 0);
+            const a = new Date(s);
+            a.setDate(a.getDate() - 30);
+            const r = s.toLocaleDateString("sv-SE")
+              , n = a.toLocaleDateString("sv-SE");
+            try {
+                const s = ((await zi({
+                    clientId: Ni.clientId,
+                    currencyFrom: 1,
+                    currencyTo: i,
+                    dateFrom: n,
+                    dateTo: r
+                })).currencyRates || []).reverse();
+                t.value[e] = s
+            } catch (o) {}
+        },
+        setCurrencyRate: function(t) {
+            e.value = t
+        }
+    }
+}
+);
+function Ja(e) {
+    return e + .5 | 0
+}
+const Ka = (e, t, i) => Math.max(Math.min(e, i), t);
+function Qa(e) {
+    return Ka(Ja(2.55 * e), 0, 255)
+}
+function $a(e) {
+    return Ka(Ja(255 * e), 0, 255)
+}
+function er(e) {
+    return Ka(Ja(e / 2.55) / 100, 0, 1)
+}
+function tr(e) {
+    return Ka(Ja(100 * e), 0, 100)
+}
+const ir = {
+    0: 0,
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
+    A: 10,
+    B: 11,
+    C: 12,
+    D: 13,
+    E: 14,
+    F: 15,
+    a: 10,
+    b: 11,
+    c: 12,
+    d: 13,
+    e: 14,
+    f: 15
+}
+  , sr = [..."0123456789ABCDEF"]
+ 
+
+--- MATCH 2, position 781283 ---
+
+ y( () => e.translations),
+                            isLoading: y( () => e.isLoading),
+                            error: y( () => e.error)
+                        }
+                    }
+                    )()?.loadGroups(Gi));
+                    e && (o.value = e)
+                }
+            }
+            )(),
+            async function() {
+                const e = Za();
+                if (i.currencyRates?.length) {
+                    const t = "string" == typeof i.currencyRates ? JSON.parse(i.currencyRates) : i.currencyRates;
+                    e.setCurrencyRate(t)
+                } else
+                    e.currencyRates?.length ? u.value = e.currencyRates : u.value = await e.fetchCurrencyRate()
+            }()
+        }
+        ),
+        M( () => i.translations, () => o.value = "string" == typeof i.translations ? JSON.parse(i.translations) : i.translations, {
+            immediate: !0
+        }),
+        M( () => i.locale, () => l.value = i.locale, {
+            immediate: !0
+        }),
+        M( () => i.currencyRates, () => u.value = "string" == typeof i.currencyRates ? JSON.parse(i.currencyRates) : i.currencyRates, {
+            immediate: !0
+        }),
+        M([ () => i.topMenuItems, () => i.footerLogoMenuItems, () => i.socialLinksMenuItems], e => {
+            c.value || (c.value = {}),
+            e[0] && (c.value.topMenuItems = "string" == typeof e[0] ? JSON.parse(e[0]) : e[0]),
+            e[1] && (c.value.footerLogoMenuItems = "string" == typeof e[1] ? JSON.parse(e[1]) : e[1]),
+            e[2] && (c.value.socialLinksMenuItems = "string" == typeof e[2] ? JSON.parse(e[2]) : e[2])
+        }
+        , {
+            immediate: !0
+        }),
+        D("locale", l),
+        D("ta", (e, t="") => {
+            const i = e.split(".");
+            let s = o.value
+              , a = "";
+            return s ? (i.forEach(e => {
+                const t = s?.[e];
+                if (!t)
+                    return null;
+                "string" != typeof t ? s = t : a = t
+            }
+            ),
+            a || t || e) : t || e
+        }
+        ),
+        (t, i) => (E(),
+        O("footer", {
+            class: z(["npm-footer", e.integrationClass])
+        }, [N("div", Jh, [N("div", Kh, [I(Zh, {
+            "logo-menu-items": c.value?.footerLogoMenuItems || []
+        }, null, 8, ["logo-menu-items"]), I(m(Id), {
+            "social-menu-items": c.value?.socialLinksMenuItems || []
+        }, null, 8, ["social-menu-items"])]), N("div", Qh, [(E(!0),
+        O(F, null, R(c.value?.topMenuItems, (t, i) => (E(),
+        L(m(Ud), {
+            key: t.id,
+            "is-incoming": d.value,
+            "menu-item": t,
+            locale: l.value,
+            "base-url": e.baseUrl,
+            class: z({
+                "main-block__item-span": i > 0
+            })
+        }, null, 8, ["is-incoming", "menu-item", "locale", "base-url", "class"]))), 128)), I(m(Md), {
+            "exchange-rate": u.value,
+            class: "md3-mt-28"
+        }, null, 8, ["exchange-rate"])]), N("div", $h, [h.value ? (E(),
+        L(m(oh), {
+            key: 0,
+            "is-incoming": d.value,
+            "page-url": m(a)?.path ?? "",
+          
+
+====================================================================================================
+SEARCH: /api/currencies/rates
+
+--- MATCH 1, position 70462 ---
+
+Ei = (e={}) => (e.pixelEnv && function(e) {
+    ht = e
+}(e.pixelEnv),
+void 0 !== e.debug ? ft(e.debug) : e.pixelEnv && gt(e.pixelEnv) && ft(!0),
+new St({
+    ...e,
+    providers: e.providers ?? Di(e),
+    events: e.events ?? At
+}))
+  , Oi = j("Analytics", () => {
+    const e = p(null);
+    return {
+        sdk: e,
+        init: function(t) {
+            e.value = Ei(t)
+        },
+        sendEvent: async function(t) {
+            e.value && await e.value.ExampleEvent(t)
+        }
+    }
+}
+)
+  , Ni = {
+    API_ENDPOINTS: {},
+    clientId: {}?.VITE_APP_CLIENT_ID || "b2c:ru",
+    mainboxClientId: "b2c",
+    localization: {
+        localization: "ru"
+    }
+}
+  , Ii = "https://apigate.fstravel.com/api/currencies/rates"
+  , Fi = "https://geocms.fstravel.com/api/localize"
+  , Ri = "https://geocms.fstravel.com/api/all-menu"
+  , Li = "api/send-mail-incoming";
+async function zi(e) {
+    const t = Ii
+      , i = await fetch(t, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "x-user-agent": "FUNSUN"
+        },
+        body: JSON.stringify(e)
+    });
+    if (200 !== i.status)
+        throw new Error(`Failed to load currency: ${i.statusText}`);
+    return await i.json()
+}
+const _i = async e => {
+    if (typeof window > "u")
+        return;
+    const t = e && await (async (e, t) => {
+        if (typeof window > "u")
+            return;
+        const i = e.concat(t)
+          , s = (new TextEncoder).encode(i)
+          , a = await window.crypto.subtle.digest("SHA-256", s)
+          , r = Array.from(new Uint8Array(a)).map(e => e.toString(16).padStart(2, "0")).join("").concat(t)
+          , n = (new TextEncoder).encode(r)
+          , o = await window.crypto.subtle.digest("SHA-256", n);
+        return Array.from(new Uint8Array(o)).map(e => e.toString(16).padStart(2, "0")).join("")
+    }
+    )(e, "T_I-*umiW#_FRuBrIfR0cr-Get");
+    window.dataLayer = window.dataLayer || [],
+    window.dataLayer.push({
+        event: "form_submit",
+        form_id: "email_subscribe_bottom",
+        eventAction: "sumbit_success",
+        euid: t
+    })
+}
+  , ji = async () => {
+    if (typeof window > "u")
+        return;
+    const e = window.location.origin + window.location.pathname;
+    window.dataLayer = window.dataLayer || [],
+    window.dataLayer.push({
+        event: "subscription_button_main",
+        event_category: e
+    })
+}
+  , Bi = async e => {
+    if (typeof window > "u")
+        return;
+    const t = window.location.origin + window.location.pathname;
+    window.dataLayer = window.dataLayer || [],
+    window.dataLayer.push({
+        event: "click_stores_footer",
+        Click_URL: e,
+        event_category: t
+    })
+}
+  , Ui = e => {
+    if (!(typeof window > "u") && window.mindbox)
+        try {
+            const t = {
+                customer: {
+                    email: e.email,
+                    customFields: {
+                        subscriberTypeFS: e.clientId,
+                        subscribeSourceFS: "",
+                        SectionOfSiteFS: e.path
+                    },
+                    area: {
+                        ids: {
+                            externalId: localStorage.selectedCityFromI
+
+====================================================================================================
+SEARCH: currencies/rates
+
+--- MATCH 1, position 70467 ---
+
+(e={}) => (e.pixelEnv && function(e) {
+    ht = e
+}(e.pixelEnv),
+void 0 !== e.debug ? ft(e.debug) : e.pixelEnv && gt(e.pixelEnv) && ft(!0),
+new St({
+    ...e,
+    providers: e.providers ?? Di(e),
+    events: e.events ?? At
+}))
+  , Oi = j("Analytics", () => {
+    const e = p(null);
+    return {
+        sdk: e,
+        init: function(t) {
+            e.value = Ei(t)
+        },
+        sendEvent: async function(t) {
+            e.value && await e.value.ExampleEvent(t)
+        }
+    }
+}
+)
+  , Ni = {
+    API_ENDPOINTS: {},
+    clientId: {}?.VITE_APP_CLIENT_ID || "b2c:ru",
+    mainboxClientId: "b2c",
+    localization: {
+        localization: "ru"
+    }
+}
+  , Ii = "https://apigate.fstravel.com/api/currencies/rates"
+  , Fi = "https://geocms.fstravel.com/api/localize"
+  , Ri = "https://geocms.fstravel.com/api/all-menu"
+  , Li = "api/send-mail-incoming";
+async function zi(e) {
+    const t = Ii
+      , i = await fetch(t, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "x-user-agent": "FUNSUN"
+        },
+        body: JSON.stringify(e)
+    });
+    if (200 !== i.status)
+        throw new Error(`Failed to load currency: ${i.statusText}`);
+    return await i.json()
+}
+const _i = async e => {
+    if (typeof window > "u")
+        return;
+    const t = e && await (async (e, t) => {
+        if (typeof window > "u")
+            return;
+        const i = e.concat(t)
+          , s = (new TextEncoder).encode(i)
+          , a = await window.crypto.subtle.digest("SHA-256", s)
+          , r = Array.from(new Uint8Array(a)).map(e => e.toString(16).padStart(2, "0")).join("").concat(t)
+          , n = (new TextEncoder).encode(r)
+          , o = await window.crypto.subtle.digest("SHA-256", n);
+        return Array.from(new Uint8Array(o)).map(e => e.toString(16).padStart(2, "0")).join("")
+    }
+    )(e, "T_I-*umiW#_FRuBrIfR0cr-Get");
+    window.dataLayer = window.dataLayer || [],
+    window.dataLayer.push({
+        event: "form_submit",
+        form_id: "email_subscribe_bottom",
+        eventAction: "sumbit_success",
+        euid: t
+    })
+}
+  , ji = async () => {
+    if (typeof window > "u")
+        return;
+    const e = window.location.origin + window.location.pathname;
+    window.dataLayer = window.dataLayer || [],
+    window.dataLayer.push({
+        event: "subscription_button_main",
+        event_category: e
+    })
+}
+  , Bi = async e => {
+    if (typeof window > "u")
+        return;
+    const t = window.location.origin + window.location.pathname;
+    window.dataLayer = window.dataLayer || [],
+    window.dataLayer.push({
+        event: "click_stores_footer",
+        Click_URL: e,
+        event_category: t
+    })
+}
+  , Ui = e => {
+    if (!(typeof window > "u") && window.mindbox)
+        try {
+            const t = {
+                customer: {
+                    email: e.email,
+                    customFields: {
+                        subscriberTypeFS: e.clientId,
+                        subscribeSourceFS: "",
+                        SectionOfSiteFS: e.path
+                    },
+                    area: {
+                        ids: {
+                            externalId: localStorage.selectedCityFromId
+   
+
+====================================================================================================
+SEARCH: currencyRates
+
+--- MATCH 1, position 223682 ---
+
+      return E(),
+        O("svg", Ga, [...t[0] || (t[0] = [N("path", {
+            fill: "currentColor",
+            d: "M18.07 10.32c-.19 0-.38-.07-.53-.22L12 4.56 6.46 10.1c-.29.29-.77.29-1.06 0a.754.754 0 0 1 0-1.06l6.07-6.07c.29-.29.77-.29 1.06 0l6.07 6.07c.29.29.29.77 0 1.06-.14.15-.34.22-.53.22"
+        }, null, -1), N("path", {
+            fill: "currentColor",
+            d: "M12 21.25c-.41 0-.75-.34-.75-.75V3.67c0-.41.34-.75.75-.75s.75.34.75.75V20.5c0 .41-.34.75-.75.75"
+        }, null, -1)])])
+    }
+}
+  , qa = e => new Promise(t => setTimeout(t, e))
+  , Za = j("ExchangeRate", () => {
+    const e = p([])
+      , t = p({
+        USD: [],
+        EUR: []
+    });
+    return {
+        currencyRates: e,
+        rateHistoryMap: t,
+        fetchCurrencyRate: async function() {
+            e.value = [];
+            const t = (new Date).toLocaleDateString("sv-SE")
+              , i = [];
+            if (!(typeof window > "u"))
+                return await Promise.all([2, 3].map(async e => {
+                    let s = 0
+                      , a = !1;
+                    for (; !a && s < 5; )
+                        try {
+                            const s = await zi({
+                                clientId: Ni.clientId,
+                                currencyFrom: 1,
+                                currencyTo: e,
+                                dateFrom: t,
+                                dateTo: t
+                            });
+                            i.push(s),
+                            a = !0
+                        } catch (r) {
+                            s++,
+                            s > 2 && await qa(300)
+                        }
+                }
+                )),
+                e.value = i.flatMap(e => e.currencyRates ?? []),
+                e.value
+        },
+        fetchCurrencyHistory: async function(e) {
+            if (t.value[e]?.length)
+                return;
+            const i = "USD" === e ? 2 : 3
+              , s = new Date;
+            s.setHours(0, 0, 0, 0);
+            const a = new Date(s);
+            a.setDate(a.getDate() - 30);
+            const r = s.toLocaleDateString("sv-SE")
+              , n = a.toLocaleDateString("sv-SE");
+            try {
+                const s = ((await zi({
+                    clientId: Ni.clientId,
+                    currencyFrom: 1,
+                    currencyTo: i,
+                    dateFrom: n,
+                    dateTo: r
+                })).currencyRates || []).reverse();
+                t.value[e] = s
+            } catch (o) {}
+        },
+        setCurrencyRate: function(t) {
+            e.value = t
+        }
+    }
+}
+);
+function Ja(e) {
+    return e + .5 | 0
+}
+const Ka = (e, t, i) => Math.max(Math.min(e, i), t);
+function Qa(e) {
+    return Ka(Ja(2.55 * e), 0, 255)
+}
+function $a(e) {
+    return Ka(Ja(255 * e), 0, 255)
+}
+function er(e) {
+    return Ka(Ja(e / 2.55) / 100, 0, 1)
+}
+function tr(e) {
+    return Ka(Ja(100 * e), 0, 100)
+}
+const ir = {
+    0: 0,
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
+    A: 10,
+    B: 11,
+    C: 12,
+    D: 13,
+    E: 14,
+    F: 15,
+    a: 10,
+    b: 11,
+    c: 12,
+    d: 13,
+    
+
+--- MATCH 2, position 224745 ---
+
+= !1;
+                    for (; !a && s < 5; )
+                        try {
+                            const s = await zi({
+                                clientId: Ni.clientId,
+                                currencyFrom: 1,
+                                currencyTo: e,
+                                dateFrom: t,
+                                dateTo: t
+                            });
+                            i.push(s),
+                            a = !0
+                        } catch (r) {
+                            s++,
+                            s > 2 && await qa(300)
+                        }
+                }
+                )),
+                e.value = i.flatMap(e => e.currencyRates ?? []),
+                e.value
+        },
+        fetchCurrencyHistory: async function(e) {
+            if (t.value[e]?.length)
+                return;
+            const i = "USD" === e ? 2 : 3
+              , s = new Date;
+            s.setHours(0, 0, 0, 0);
+            const a = new Date(s);
+            a.setDate(a.getDate() - 30);
+            const r = s.toLocaleDateString("sv-SE")
+              , n = a.toLocaleDateString("sv-SE");
+            try {
+                const s = ((await zi({
+                    clientId: Ni.clientId,
+                    currencyFrom: 1,
+                    currencyTo: i,
+                    dateFrom: n,
+                    dateTo: r
+                })).currencyRates || []).reverse();
+                t.value[e] = s
+            } catch (o) {}
+        },
+        setCurrencyRate: function(t) {
+            e.value = t
+        }
+    }
+}
+);
+function Ja(e) {
+    return e + .5 | 0
+}
+const Ka = (e, t, i) => Math.max(Math.min(e, i), t);
+function Qa(e) {
+    return Ka(Ja(2.55 * e), 0, 255)
+}
+function $a(e) {
+    return Ka(Ja(255 * e), 0, 255)
+}
+function er(e) {
+    return Ka(Ja(e / 2.55) / 100, 0, 1)
+}
+function tr(e) {
+    return Ka(Ja(100 * e), 0, 100)
+}
+const ir = {
+    0: 0,
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
+    A: 10,
+    B: 11,
+    C: 12,
+    D: 13,
+    E: 14,
+    F: 15,
+    a: 10,
+    b: 11,
+    c: 12,
+    d: 13,
+    e: 14,
+    f: 15
+}
+  , sr = [..."0123456789ABCDEF"]
+  , ar = e => sr[15 & e]
+  , rr = e => sr[(240 & e) >> 4] + sr[15 & e]
+  , nr = e => (240 & e) >> 4 == (15 & e);
+function or(e) {
+    var t = (e => nr(e.r) && nr(e.g) && nr(e.b) && nr(e.a))(e) ? ar : rr;
+    return e ? "#" + t(e.r) + t(e.g) + t(e.b) + ( (e, t) => e < 255 ? t(e) : "")(e.a, t) : void 0
+}
+const lr = /^(hsla?|hwb|hsv)\(\s*([-+.e\d]+)(?:deg)?[\s,]+([-+.e\d]+)%[\s,]+([-+.e\d]+)%(?:[\s,]+([-+.e\d]+)(%)?)?\s*\)$/;
+function cr(e, t, i) {
+    const s = t * Math.min(i, 1 - i)
+      , a = (t, a=(t + e / 30) % 12) => i - s * Math.max(Math.min(a - 3, 9 - a, 1), -1);
+    return [a(0), a(8), a(4)]
+}
+function ur(e, t, i) {
+    const s = (s, a=(s + e / 60) % 6) => i - i * t * Math.max(Math.min(a, 4 - a, 1), 0);
+    return [s(5), s(3), s(1)]
+}
+function dr(e, t, i) {
+    const s = cr(e, 1, .5);
+    let a;
+    for (t + i > 1 && (a = 1 / (t + i),
+    t *= a,
+    i *= a),
+    a = 0; a < 3; a++)
+        s[a] *= 1 - t - i,
+        s[a] += t;
+    return s
+}
+function hr(e) {
+    const t = e.r / 255
+      ,
+
+--- MATCH 3, position 225454 ---
+
+ates ?? []),
+                e.value
+        },
+        fetchCurrencyHistory: async function(e) {
+            if (t.value[e]?.length)
+                return;
+            const i = "USD" === e ? 2 : 3
+              , s = new Date;
+            s.setHours(0, 0, 0, 0);
+            const a = new Date(s);
+            a.setDate(a.getDate() - 30);
+            const r = s.toLocaleDateString("sv-SE")
+              , n = a.toLocaleDateString("sv-SE");
+            try {
+                const s = ((await zi({
+                    clientId: Ni.clientId,
+                    currencyFrom: 1,
+                    currencyTo: i,
+                    dateFrom: n,
+                    dateTo: r
+                })).currencyRates || []).reverse();
+                t.value[e] = s
+            } catch (o) {}
+        },
+        setCurrencyRate: function(t) {
+            e.value = t
+        }
+    }
+}
+);
+function Ja(e) {
+    return e + .5 | 0
+}
+const Ka = (e, t, i) => Math.max(Math.min(e, i), t);
+function Qa(e) {
+    return Ka(Ja(2.55 * e), 0, 255)
+}
+function $a(e) {
+    return Ka(Ja(255 * e), 0, 255)
+}
+function er(e) {
+    return Ka(Ja(e / 2.55) / 100, 0, 1)
+}
+function tr(e) {
+    return Ka(Ja(100 * e), 0, 100)
+}
+const ir = {
+    0: 0,
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
+    A: 10,
+    B: 11,
+    C: 12,
+    D: 13,
+    E: 14,
+    F: 15,
+    a: 10,
+    b: 11,
+    c: 12,
+    d: 13,
+    e: 14,
+    f: 15
+}
+  , sr = [..."0123456789ABCDEF"]
+  , ar = e => sr[15 & e]
+  , rr = e => sr[(240 & e) >> 4] + sr[15 & e]
+  , nr = e => (240 & e) >> 4 == (15 & e);
+function or(e) {
+    var t = (e => nr(e.r) && nr(e.g) && nr(e.b) && nr(e.a))(e) ? ar : rr;
+    return e ? "#" + t(e.r) + t(e.g) + t(e.b) + ( (e, t) => e < 255 ? t(e) : "")(e.a, t) : void 0
+}
+const lr = /^(hsla?|hwb|hsv)\(\s*([-+.e\d]+)(?:deg)?[\s,]+([-+.e\d]+)%[\s,]+([-+.e\d]+)%(?:[\s,]+([-+.e\d]+)(%)?)?\s*\)$/;
+function cr(e, t, i) {
+    const s = t * Math.min(i, 1 - i)
+      , a = (t, a=(t + e / 30) % 12) => i - s * Math.max(Math.min(a - 3, 9 - a, 1), -1);
+    return [a(0), a(8), a(4)]
+}
+function ur(e, t, i) {
+    const s = (s, a=(s + e / 60) % 6) => i - i * t * Math.max(Math.min(a, 4 - a, 1), 0);
+    return [s(5), s(3), s(1)]
+}
+function dr(e, t, i) {
+    const s = cr(e, 1, .5);
+    let a;
+    for (t + i > 1 && (a = 1 / (t + i),
+    t *= a,
+    i *= a),
+    a = 0; a < 3; a++)
+        s[a] *= 1 - t - i,
+        s[a] += t;
+    return s
+}
+function hr(e) {
+    const t = e.r / 255
+      , i = e.g / 255
+      , s = e.b / 255
+      , a = Math.max(t, i, s)
+      , r = Math.min(t, i, s)
+      , n = (a + r) / 2;
+    let o, l, c;
+    return a !== r && (c = a - r,
+    l = n > .5 ? c / (2 - a - r) : c / (a + r),
+    o = function(e, t, i, s, a) {
+        return e === a ? (t - i) / s + (t < i ? 6 : 0) : t === a ? (i - e) / s + 2 : (e - t) / s + 4
+    }(t, i, s, c, a),
+    o = 60 * o + .5),
+    [0 | o, l || 0, n]
+}
+function pr(e, t, i, s) {
+    return (Array.isArray(t) ? e(t[0], t[1], t[2]) : e(t, i, s)).map($a)
+}
+function fr(e, t, i) {
+    return pr(cr, e, t, i)
+}
+function gr(e) {
+    return (e % 360 + 360) % 360
+}
+function mr(e) {
+    const t = lr.exec(e);
+    let i, s = 255;
+    if (!t)
+    
+
+--- MATCH 4, position 777446 ---
+
+alue?.img || "",
+            loading: "lazy",
+            alt: "Travel Agency Logo"
+        }, null, 8, Xh)], 8, Gh)]))
+    }
+})
+  , Zh = ss(qh, [["__scopeId", "data-v-1d14d48e"]])
+  , Jh = {
+    class: "npm-footer__container _container"
+}
+  , Kh = {
+    class: "npm-footer__header-block mb-48 md3-mb-32"
+}
+  , Qh = {
+    class: "npm-footer__main-block mb-48 md3-mb-32"
+}
+  , $h = {
+    class: "npm-footer__form-block mb-48 md3-mb-32"
+}
+  , ep = e({
+    __name: "AppFooter",
+    props: {
+        topMenuItems: {
+            default: void 0
+        },
+        footerLogoMenuItems: {
+            default: void 0
+        },
+        socialLinksMenuItems: {
+            default: void 0
+        },
+        currencyRates: {
+            default: void 0
+        },
+        qrImageUrl: {
+            default: void 0
+        },
+        integrationClass: {
+            default: ""
+        },
+        locale: {
+            default: "ru"
+        },
+        translations: {
+            default: void 0
+        },
+        baseUrl: {
+            default: void 0
+        }
+    },
+    emits: ["subscribe"],
+    setup(e, {emit: t}) {
+        const i = e
+          , s = t
+          , a = T()
+          , r = p()
+          , n = p()
+          , o = p(null)
+          , l = p(i.locale || "ru")
+          , c = p()
+          , u = p()
+          , d = y( () => a?.path?.includes("incoming") ?? !1)
+          , h = y( () => !a?.path.includes("/podpiska-na-rassylku-s-vygodnymi-turami") && !a?.path.includes("podbor-tura"));
+        return P( () => {
+            n.value = Vi(),
+            r.value = Oi(),
+            r.value.init({
+                context: {
+                    userId: "12345",
+                    sessionId: "abc-def"
+                }
+            }),
+            (async () => {
+                if (!i.topMenuItems?.length || !i.footerLogoMenuItems?.length || !i.socialLinksMenuItems?.length) {
+                    const e = await async function(e) {
+                        const t = await fetch(Ri, {
+                            method: "POST",
+                            headers: {
+                                Authorization: "Bearer 6zLZ9jIz0b42uv1qHBBbP9sO105ExJUVEKIRGhh0ZrhW993bVvEbUSfoxhXnQ0fduyD7gAfCaEIO9XKU",
+                                ClientId: Ni.clientId,
+                                "Accept-Language": e
+                            }
+                        });
+                        if (200 !== t.status)
+                            throw new Error(`Failed to load menu: ${t.statusText}`);
+                        return await t.json()
+                    }(i.locale);
+                    c.value || (c.value = {}),
+                    i.topMenuItems?.length || (c.value.topMenuItems = e.footerNav?.menu_items || []),
+                    i.footerLogoMenuItems?.length || (c.value.footerLogoMenuItems = e.footer_logo?.menu_items || []),
+                    i.socialLinksMenuItems?.length || (c.value.socialLinksMenuItems = e.socialLinks?.menu_items || [])
+                }
+            }
+            )(),
+            (async () => {
+                if (i.translations)
+                    try {
+                        const e = "string" == typeof i.translations ? JSON.parse(
+
+--- MATCH 5, position 780988 ---
+
+      , {locale: t} = Wi();
+                        return {
+                            locale: t,
+                            loadGroups: async (...i) => await e.loadGroups(t.value, i),
+                            ta: (t, i) => e.getTranslation(t, i),
+                            translations: y( () => e.translations),
+                            isLoading: y( () => e.isLoading),
+                            error: y( () => e.error)
+                        }
+                    }
+                    )()?.loadGroups(Gi));
+                    e && (o.value = e)
+                }
+            }
+            )(),
+            async function() {
+                const e = Za();
+                if (i.currencyRates?.length) {
+                    const t = "string" == typeof i.currencyRates ? JSON.parse(i.currencyRates) : i.currencyRates;
+                    e.setCurrencyRate(t)
+                } else
+                    e.currencyRates?.length ? u.value = e.currencyRates : u.value = await e.fetchCurrencyRate()
+            }()
+        }
+        ),
+        M( () => i.translations, () => o.value = "string" == typeof i.translations ? JSON.parse(i.translations) : i.translations, {
+            immediate: !0
+        }),
+        M( () => i.locale, () => l.value = i.locale, {
+            immediate: !0
+        }),
+        M( () => i.currencyRates, () => u.value = "string" == typeof i.currencyRates ? JSON.parse(i.currencyRates) : i.currencyRates, {
+            immediate: !0
+        }),
+        M([ () => i.topMenuItems, () => i.footerLogoMenuItems, () => i.socialLinksMenuItems], e => {
+            c.value || (c.value = {}),
+            e[0] && (c.value.topMenuItems = "string" == typeof e[0] ? JSON.parse(e[0]) : e[0]),
+            e[1] && (c.value.footerLogoMenuItems = "string" == typeof e[1] ? JSON.parse(e[1]) : e[1]),
+            e[2] && (c.value.socialLinksMenuItems = "string" == typeof e[2] ? JSON.parse(e[2]) : e[2])
+        }
+        , {
+            immediate: !0
+        }),
+        D("locale", l),
+        D("ta", (e, t="") => {
+            const i = e.split(".");
+            let s = o.value
+              , a = "";
+            return s ? (i.forEach(e => {
+                const t = s?.[e];
+                if (!t)
+                    return null;
+                "string" != typeof t ? s = t : a = t
+            }
+            ),
+            a || t || e) : t || e
+        }
+        ),
+        (t, i) => (E(),
+        O("footer", {
+            class: z(["npm-footer", e.integrationClass])
+        }, [N("div", Jh, [N("div", Kh, [I(Zh, {
+            "logo-menu-items": c.value?.footerLogoMenuItems || []
+        }, null, 8, ["logo-menu-items"]), I(m(Id), {
+            "social-menu-items": c.value?.socialLinksMenuItems || []
+        }, null, 8, ["social-menu-items"])]), N("div", Qh, [(E(!0),
+        O(F, null, R(c.value?.topMenuItems, (t, i) => (E(),
+        L(m(Ud), {
+            key: t.id,
+            "is-incoming": d.value,
+            "menu-item": t,
+            locale: l.value,
+            "base-url": e.baseUrl,
+            class: z({
+                "main-block__item-span": i > 0
+            })
+        }, null, 8, ["is-incoming", "menu-item", "locale", "base-url", "cla
+
+--- MATCH 6, position 781064 ---
+
+             locale: t,
+                            loadGroups: async (...i) => await e.loadGroups(t.value, i),
+                            ta: (t, i) => e.getTranslation(t, i),
+                            translations: y( () => e.translations),
+                            isLoading: y( () => e.isLoading),
+                            error: y( () => e.error)
+                        }
+                    }
+                    )()?.loadGroups(Gi));
+                    e && (o.value = e)
+                }
+            }
+            )(),
+            async function() {
+                const e = Za();
+                if (i.currencyRates?.length) {
+                    const t = "string" == typeof i.currencyRates ? JSON.parse(i.currencyRates) : i.currencyRates;
+                    e.setCurrencyRate(t)
+                } else
+                    e.currencyRates?.length ? u.value = e.currencyRates : u.value = await e.fetchCurrencyRate()
+            }()
+        }
+        ),
+        M( () => i.translations, () => o.value = "string" == typeof i.translations ? JSON.parse(i.translations) : i.translations, {
+            immediate: !0
+        }),
+        M( () => i.locale, () => l.value = i.locale, {
+            immediate: !0
+        }),
+        M( () => i.currencyRates, () => u.value = "string" == typeof i.currencyRates ? JSON.parse(i.currencyRates) : i.currencyRates, {
+            immediate: !0
+        }),
+        M([ () => i.topMenuItems, () => i.footerLogoMenuItems, () => i.socialLinksMenuItems], e => {
+            c.value || (c.value = {}),
+            e[0] && (c.value.topMenuItems = "string" == typeof e[0] ? JSON.parse(e[0]) : e[0]),
+            e[1] && (c.value.footerLogoMenuItems = "string" == typeof e[1] ? JSON.parse(e[1]) : e[1]),
+            e[2] && (c.value.socialLinksMenuItems = "string" == typeof e[2] ? JSON.parse(e[2]) : e[2])
+        }
+        , {
+            immediate: !0
+        }),
+        D("locale", l),
+        D("ta", (e, t="") => {
+            const i = e.split(".");
+            let s = o.value
+              , a = "";
+            return s ? (i.forEach(e => {
+                const t = s?.[e];
+                if (!t)
+                    return null;
+                "string" != typeof t ? s = t : a = t
+            }
+            ),
+            a || t || e) : t || e
+        }
+        ),
+        (t, i) => (E(),
+        O("footer", {
+            class: z(["npm-footer", e.integrationClass])
+        }, [N("div", Jh, [N("div", Kh, [I(Zh, {
+            "logo-menu-items": c.value?.footerLogoMenuItems || []
+        }, null, 8, ["logo-menu-items"]), I(m(Id), {
+            "social-menu-items": c.value?.socialLinksMenuItems || []
+        }, null, 8, ["social-menu-items"])]), N("div", Qh, [(E(!0),
+        O(F, null, R(c.value?.topMenuItems, (t, i) => (E(),
+        L(m(Ud), {
+            key: t.id,
+            "is-incoming": d.value,
+            "menu-item": t,
+            locale: l.value,
+            "base-url": e.baseUrl,
+            class: z({
+                "main-block__item-span": i > 0
+            })
+        }, null, 8, ["is-incoming", "menu-item", "locale", "base-url", "class"]))), 128)), I(m(Md), {
+            "exchange-rate": u.value,
+           
+
+--- MATCH 7, position 781093 ---
+
+                       loadGroups: async (...i) => await e.loadGroups(t.value, i),
+                            ta: (t, i) => e.getTranslation(t, i),
+                            translations: y( () => e.translations),
+                            isLoading: y( () => e.isLoading),
+                            error: y( () => e.error)
+                        }
+                    }
+                    )()?.loadGroups(Gi));
+                    e && (o.value = e)
+                }
+            }
+            )(),
+            async function() {
+                const e = Za();
+                if (i.currencyRates?.length) {
+                    const t = "string" == typeof i.currencyRates ? JSON.parse(i.currencyRates) : i.currencyRates;
+                    e.setCurrencyRate(t)
+                } else
+                    e.currencyRates?.length ? u.value = e.currencyRates : u.value = await e.fetchCurrencyRate()
+            }()
+        }
+        ),
+        M( () => i.translations, () => o.value = "string" == typeof i.translations ? JSON.parse(i.translations) : i.translations, {
+            immediate: !0
+        }),
+        M( () => i.locale, () => l.value = i.locale, {
+            immediate: !0
+        }),
+        M( () => i.currencyRates, () => u.value = "string" == typeof i.currencyRates ? JSON.parse(i.currencyRates) : i.currencyRates, {
+            immediate: !0
+        }),
+        M([ () => i.topMenuItems, () => i.footerLogoMenuItems, () => i.socialLinksMenuItems], e => {
+            c.value || (c.value = {}),
+            e[0] && (c.value.topMenuItems = "string" == typeof e[0] ? JSON.parse(e[0]) : e[0]),
+            e[1] && (c.value.footerLogoMenuItems = "string" == typeof e[1] ? JSON.parse(e[1]) : e[1]),
+            e[2] && (c.value.socialLinksMenuItems = "string" == typeof e[2] ? JSON.parse(e[2]) : e[2])
+        }
+        , {
+            immediate: !0
+        }),
+        D("locale", l),
+        D("ta", (e, t="") => {
+            const i = e.split(".");
+            let s = o.value
+              , a = "";
+            return s ? (i.forEach(e => {
+                const t = s?.[e];
+                if (!t)
+                    return null;
+                "string" != typeof t ? s = t : a = t
+            }
+            ),
+            a || t || e) : t || e
+        }
+        ),
+        (t, i) => (E(),
+        O("footer", {
+            class: z(["npm-footer", e.integrationClass])
+        }, [N("div", Jh, [N("div", Kh, [I(Zh, {
+            "logo-menu-items": c.value?.footerLogoMenuItems || []
+        }, null, 8, ["logo-menu-items"]), I(m(Id), {
+            "social-menu-items": c.value?.socialLinksMenuItems || []
+        }, null, 8, ["social-menu-items"])]), N("div", Qh, [(E(!0),
+        O(F, null, R(c.value?.topMenuItems, (t, i) => (E(),
+        L(m(Ud), {
+            key: t.id,
+            "is-incoming": d.value,
+            "menu-item": t,
+            locale: l.value,
+            "base-url": e.baseUrl,
+            class: z({
+                "main-block__item-span": i > 0
+            })
+        }, null, 8, ["is-incoming", "menu-item", "locale", "base-url", "class"]))), 128)), I(m(Md), {
+            "exchange-rate": u.value,
+            class: "md3-mt-28"
+        }
+
+--- MATCH 8, position 781112 ---
+
+    loadGroups: async (...i) => await e.loadGroups(t.value, i),
+                            ta: (t, i) => e.getTranslation(t, i),
+                            translations: y( () => e.translations),
+                            isLoading: y( () => e.isLoading),
+                            error: y( () => e.error)
+                        }
+                    }
+                    )()?.loadGroups(Gi));
+                    e && (o.value = e)
+                }
+            }
+            )(),
+            async function() {
+                const e = Za();
+                if (i.currencyRates?.length) {
+                    const t = "string" == typeof i.currencyRates ? JSON.parse(i.currencyRates) : i.currencyRates;
+                    e.setCurrencyRate(t)
+                } else
+                    e.currencyRates?.length ? u.value = e.currencyRates : u.value = await e.fetchCurrencyRate()
+            }()
+        }
+        ),
+        M( () => i.translations, () => o.value = "string" == typeof i.translations ? JSON.parse(i.translations) : i.translations, {
+            immediate: !0
+        }),
+        M( () => i.locale, () => l.value = i.locale, {
+            immediate: !0
+        }),
+        M( () => i.currencyRates, () => u.value = "string" == typeof i.currencyRates ? JSON.parse(i.currencyRates) : i.currencyRates, {
+            immediate: !0
+        }),
+        M([ () => i.topMenuItems, () => i.footerLogoMenuItems, () => i.socialLinksMenuItems], e => {
+            c.value || (c.value = {}),
+            e[0] && (c.value.topMenuItems = "string" == typeof e[0] ? JSON.parse(e[0]) : e[0]),
+            e[1] && (c.value.footerLogoMenuItems = "string" == typeof e[1] ? JSON.parse(e[1]) : e[1]),
+            e[2] && (c.value.socialLinksMenuItems = "string" == typeof e[2] ? JSON.parse(e[2]) : e[2])
+        }
+        , {
+            immediate: !0
+        }),
+        D("locale", l),
+        D("ta", (e, t="") => {
+            const i = e.split(".");
+            let s = o.value
+              , a = "";
+            return s ? (i.forEach(e => {
+                const t = s?.[e];
+                if (!t)
+                    return null;
+                "string" != typeof t ? s = t : a = t
+            }
+            ),
+            a || t || e) : t || e
+        }
+        ),
+        (t, i) => (E(),
+        O("footer", {
+            class: z(["npm-footer", e.integrationClass])
+        }, [N("div", Jh, [N("div", Kh, [I(Zh, {
+            "logo-menu-items": c.value?.footerLogoMenuItems || []
+        }, null, 8, ["logo-menu-items"]), I(m(Id), {
+            "social-menu-items": c.value?.socialLinksMenuItems || []
+        }, null, 8, ["social-menu-items"])]), N("div", Qh, [(E(!0),
+        O(F, null, R(c.value?.topMenuItems, (t, i) => (E(),
+        L(m(Ud), {
+            key: t.id,
+            "is-incoming": d.value,
+            "menu-item": t,
+            locale: l.value,
+            "base-url": e.baseUrl,
+            class: z({
+                "main-block__item-span": i > 0
+            })
+        }, null, 8, ["is-incoming", "menu-item", "locale", "base-url", "class"]))), 128)), I(m(Md), {
+            "exchange-rate": u.value,
+            class: "md3-mt-28"
+        }, null, 8, ["exchan
+
+--- MATCH 9, position 781213 ---
+
+) => e.getTranslation(t, i),
+                            translations: y( () => e.translations),
+                            isLoading: y( () => e.isLoading),
+                            error: y( () => e.error)
+                        }
+                    }
+                    )()?.loadGroups(Gi));
+                    e && (o.value = e)
+                }
+            }
+            )(),
+            async function() {
+                const e = Za();
+                if (i.currencyRates?.length) {
+                    const t = "string" == typeof i.currencyRates ? JSON.parse(i.currencyRates) : i.currencyRates;
+                    e.setCurrencyRate(t)
+                } else
+                    e.currencyRates?.length ? u.value = e.currencyRates : u.value = await e.fetchCurrencyRate()
+            }()
+        }
+        ),
+        M( () => i.translations, () => o.value = "string" == typeof i.translations ? JSON.parse(i.translations) : i.translations, {
+            immediate: !0
+        }),
+        M( () => i.locale, () => l.value = i.locale, {
+            immediate: !0
+        }),
+        M( () => i.currencyRates, () => u.value = "string" == typeof i.currencyRates ? JSON.parse(i.currencyRates) : i.currencyRates, {
+            immediate: !0
+        }),
+        M([ () => i.topMenuItems, () => i.footerLogoMenuItems, () => i.socialLinksMenuItems], e => {
+            c.value || (c.value = {}),
+            e[0] && (c.value.topMenuItems = "string" == typeof e[0] ? JSON.parse(e[0]) : e[0]),
+            e[1] && (c.value.footerLogoMenuItems = "string" == typeof e[1] ? JSON.parse(e[1]) : e[1]),
+            e[2] && (c.value.socialLinksMenuItems = "string" == typeof e[2] ? JSON.parse(e[2]) : e[2])
+        }
+        , {
+            immediate: !0
+        }),
+        D("locale", l),
+        D("ta", (e, t="") => {
+            const i = e.split(".");
+            let s = o.value
+              , a = "";
+            return s ? (i.forEach(e => {
+                const t = s?.[e];
+                if (!t)
+                    return null;
+                "string" != typeof t ? s = t : a = t
+            }
+            ),
+            a || t || e) : t || e
+        }
+        ),
+        (t, i) => (E(),
+        O("footer", {
+            class: z(["npm-footer", e.integrationClass])
+        }, [N("div", Jh, [N("div", Kh, [I(Zh, {
+            "logo-menu-items": c.value?.footerLogoMenuItems || []
+        }, null, 8, ["logo-menu-items"]), I(m(Id), {
+            "social-menu-items": c.value?.socialLinksMenuItems || []
+        }, null, 8, ["social-menu-items"])]), N("div", Qh, [(E(!0),
+        O(F, null, R(c.value?.topMenuItems, (t, i) => (E(),
+        L(m(Ud), {
+            key: t.id,
+            "is-incoming": d.value,
+            "menu-item": t,
+            locale: l.value,
+            "base-url": e.baseUrl,
+            class: z({
+                "main-block__item-span": i > 0
+            })
+        }, null, 8, ["is-incoming", "menu-item", "locale", "base-url", "class"]))), 128)), I(m(Md), {
+            "exchange-rate": u.value,
+            class: "md3-mt-28"
+        }, null, 8, ["exchange-rate"])]), N("div", $h, [h.value ? (E(),
+        L(m(oh), {
+            key: 0,
+            "is-in
+
+--- MATCH 10, position 781249 ---
+
+                     translations: y( () => e.translations),
+                            isLoading: y( () => e.isLoading),
+                            error: y( () => e.error)
+                        }
+                    }
+                    )()?.loadGroups(Gi));
+                    e && (o.value = e)
+                }
+            }
+            )(),
+            async function() {
+                const e = Za();
+                if (i.currencyRates?.length) {
+                    const t = "string" == typeof i.currencyRates ? JSON.parse(i.currencyRates) : i.currencyRates;
+                    e.setCurrencyRate(t)
+                } else
+                    e.currencyRates?.length ? u.value = e.currencyRates : u.value = await e.fetchCurrencyRate()
+            }()
+        }
+        ),
+        M( () => i.translations, () => o.value = "string" == typeof i.translations ? JSON.parse(i.translations) : i.translations, {
+            immediate: !0
+        }),
+        M( () => i.locale, () => l.value = i.locale, {
+            immediate: !0
+        }),
+        M( () => i.currencyRates, () => u.value = "string" == typeof i.currencyRates ? JSON.parse(i.currencyRates) : i.currencyRates, {
+            immediate: !0
+        }),
+        M([ () => i.topMenuItems, () => i.footerLogoMenuItems, () => i.socialLinksMenuItems], e => {
+            c.value || (c.value = {}),
+            e[0] && (c.value.topMenuItems = "string" == typeof e[0] ? JSON.parse(e[0]) : e[0]),
+            e[1] && (c.value.footerLogoMenuItems = "string" == typeof e[1] ? JSON.parse(e[1]) : e[1]),
+            e[2] && (c.value.socialLinksMenuItems = "string" == typeof e[2] ? JSON.parse(e[2]) : e[2])
+        }
+        , {
+            immediate: !0
+        }),
+        D("locale", l),
+        D("ta", (e, t="") => {
+            const i = e.split(".");
+            let s = o.value
+              , a = "";
+            return s ? (i.forEach(e => {
+                const t = s?.[e];
+                if (!t)
+                    return null;
+                "string" != typeof t ? s = t : a = t
+            }
+            ),
+            a || t || e) : t || e
+        }
+        ),
+        (t, i) => (E(),
+        O("footer", {
+            class: z(["npm-footer", e.integrationClass])
+        }, [N("div", Jh, [N("div", Kh, [I(Zh, {
+            "logo-menu-items": c.value?.footerLogoMenuItems || []
+        }, null, 8, ["logo-menu-items"]), I(m(Id), {
+            "social-menu-items": c.value?.socialLinksMenuItems || []
+        }, null, 8, ["social-menu-items"])]), N("div", Qh, [(E(!0),
+        O(F, null, R(c.value?.topMenuItems, (t, i) => (E(),
+        L(m(Ud), {
+            key: t.id,
+            "is-incoming": d.value,
+            "menu-item": t,
+            locale: l.value,
+            "base-url": e.baseUrl,
+            class: z({
+                "main-block__item-span": i > 0
+            })
+        }, null, 8, ["is-incoming", "menu-item", "locale", "base-url", "class"]))), 128)), I(m(Md), {
+            "exchange-rate": u.value,
+            class: "md3-mt-28"
+        }, null, 8, ["exchange-rate"])]), N("div", $h, [h.value ? (E(),
+        L(m(oh), {
+            key: 0,
+            "is-incoming": d.value,
+            "page-
+
+... further matches skipped ...
+
+====================================================================================================
+SEARCH: clientId
+
+--- MATCH 1, position 70295 ---
+
+(new ai({
+        enabled: !1 !== e.adriver?.enabled,
+        autoInitPixels: !1 !== e.adriver?.autoInitPixels,
+        pixels: e.adriver?.pixels
+    }), Pi)]
+}
+const Ei = (e={}) => (e.pixelEnv && function(e) {
+    ht = e
+}(e.pixelEnv),
+void 0 !== e.debug ? ft(e.debug) : e.pixelEnv && gt(e.pixelEnv) && ft(!0),
+new St({
+    ...e,
+    providers: e.providers ?? Di(e),
+    events: e.events ?? At
+}))
+  , Oi = j("Analytics", () => {
+    const e = p(null);
+    return {
+        sdk: e,
+        init: function(t) {
+            e.value = Ei(t)
+        },
+        sendEvent: async function(t) {
+            e.value && await e.value.ExampleEvent(t)
+        }
+    }
+}
+)
+  , Ni = {
+    API_ENDPOINTS: {},
+    clientId: {}?.VITE_APP_CLIENT_ID || "b2c:ru",
+    mainboxClientId: "b2c",
+    localization: {
+        localization: "ru"
+    }
+}
+  , Ii = "https://apigate.fstravel.com/api/currencies/rates"
+  , Fi = "https://geocms.fstravel.com/api/localize"
+  , Ri = "https://geocms.fstravel.com/api/all-menu"
+  , Li = "api/send-mail-incoming";
+async function zi(e) {
+    const t = Ii
+      , i = await fetch(t, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "x-user-agent": "FUNSUN"
+        },
+        body: JSON.stringify(e)
+    });
+    if (200 !== i.status)
+        throw new Error(`Failed to load currency: ${i.statusText}`);
+    return await i.json()
+}
+const _i = async e => {
+    if (typeof window > "u")
+        return;
+    const t = e && await (async (e, t) => {
+        if (typeof window > "u")
+            return;
+        const i = e.concat(t)
+          , s = (new TextEncoder).encode(i)
+          , a = await window.crypto.subtle.digest("SHA-256", s)
+          , r = Array.from(new Uint8Array(a)).map(e => e.toString(16).padStart(2, "0")).join("").concat(t)
+          , n = (new TextEncoder).encode(r)
+          , o = await window.crypto.subtle.digest("SHA-256", n);
+        return Array.from(new Uint8Array(o)).map(e => e.toString(16).padStart(2, "0")).join("")
+    }
+    )(e, "T_I-*umiW#_FRuBrIfR0cr-Get");
+    window.dataLayer = window.dataLayer || [],
+    window.dataLayer.push({
+        event: "form_submit",
+        form_id: "email_subscribe_bottom",
+        eventAction: "sumbit_success",
+        euid: t
+    })
+}
+  , ji = async () => {
+    if (typeof window > "u")
+        return;
+    const e = window.location.origin + window.location.pathname;
+    window.dataLayer = window.dataLayer || [],
+    window.dataLayer.push({
+        event: "subscription_button_main",
+        event_category: e
+    })
+}
+  , Bi = async e => {
+    if (typeof window > "u")
+        return;
+    const t = window.location.origin + window.location.pathname;
+    window.dataLayer = window.dataLayer || [],
+    window.dataLayer.push({
+        event: "click_stores_footer",
+        Click_URL: e,
+        event_category: t
+    })
+}
+  , Ui = e => {
+    if (!(typeof window > "u") && window.mindbox)
+        try {
+            const t = {
+                customer: {
+                    email: e.email,
+                    customFields: {
+                        subscriberTypeFS: e.clientId,
+                        subscribeSourceFS: "",
+                        SectionOf
+
+--- MATCH 2, position 72705 ---
+
+ window.dataLayer = window.dataLayer || [],
+    window.dataLayer.push({
+        event: "subscription_button_main",
+        event_category: e
+    })
+}
+  , Bi = async e => {
+    if (typeof window > "u")
+        return;
+    const t = window.location.origin + window.location.pathname;
+    window.dataLayer = window.dataLayer || [],
+    window.dataLayer.push({
+        event: "click_stores_footer",
+        Click_URL: e,
+        event_category: t
+    })
+}
+  , Ui = e => {
+    if (!(typeof window > "u") && window.mindbox)
+        try {
+            const t = {
+                customer: {
+                    email: e.email,
+                    customFields: {
+                        subscriberTypeFS: e.clientId,
+                        subscribeSourceFS: "",
+                        SectionOfSiteFS: e.path
+                    },
+                    area: {
+                        ids: {
+                            externalId: localStorage.selectedCityFromId
+                        }
+                    },
+                    subscriptions: [{
+                        brand: "FUNSUN",
+                        pointOfContact: "Email"
+                    }]
+                }
+            };
+            e.isTbank && (t.pointOfContact = "tbank.fstravel.com"),
+            window.mindbox("async", {
+                operation: "SubscriptionOnMainPages",
+                data: t
+            })
+        } catch (tf) {}
+}
+  , Hi = e => {
+    if (!(typeof window > "u") && window.mindbox)
+        try {
+            const t = {
+                customer: {
+                    email: e.email,
+                    customFields: {
+                        subscriberTypeFS: e.clientId,
+                        subscribeSourceFS: "",
+                        SectionOfSiteFS: e.path
+                    },
+                    area: {
+                        ids: {
+                            externalId: localStorage.selectedCityFromId
+                        }
+                    },
+                    subscriptions: [{
+                        brand: "FUNSUN",
+                        pointOfContact: "Email"
+                    }]
+                }
+            };
+            e.isTbank && (t.customer.PointOfContact = "tbank.fstravel.com"),
+            window.mindbox("async", {
+                operation: "SubscriptionOnInternalPages",
+                data: t
+            })
+        } catch (tf) {}
+}
+;
+const Yi = {
+    async loadTranslations(e) {
+        const {groups: t, locale: i, clientId: s=Ni.clientId} = e;
+        try {
+            const e = Fi
+              , a = await fetch(e, {
+                method: "POST",
+                body: JSON.stringify({
+                    groups: t
+                }),
+                headers: {
+                    Authorization: "Bearer 6zLZ9jIz0b42uv1qHBBbP9sO105ExJUVEKIRGhh0ZrhW993bVvEbUSfoxhXnQ0fduyD7gAfCaEIO9XKU",
+                    clientId: s,
+                    "Accept-Language": i,
+                    "Content-Type": "application/json"
+                }
+            });
+            if (!a.ok)
+                throw new Error(`Failed to load translations: ${a.statusText}`);
+            return await a.json()
+        } catch (a) {
+            return 
+
+--- MATCH 3, position 73669 ---
+
+                   }
+                    },
+                    subscriptions: [{
+                        brand: "FUNSUN",
+                        pointOfContact: "Email"
+                    }]
+                }
+            };
+            e.isTbank && (t.pointOfContact = "tbank.fstravel.com"),
+            window.mindbox("async", {
+                operation: "SubscriptionOnMainPages",
+                data: t
+            })
+        } catch (tf) {}
+}
+  , Hi = e => {
+    if (!(typeof window > "u") && window.mindbox)
+        try {
+            const t = {
+                customer: {
+                    email: e.email,
+                    customFields: {
+                        subscriberTypeFS: e.clientId,
+                        subscribeSourceFS: "",
+                        SectionOfSiteFS: e.path
+                    },
+                    area: {
+                        ids: {
+                            externalId: localStorage.selectedCityFromId
+                        }
+                    },
+                    subscriptions: [{
+                        brand: "FUNSUN",
+                        pointOfContact: "Email"
+                    }]
+                }
+            };
+            e.isTbank && (t.customer.PointOfContact = "tbank.fstravel.com"),
+            window.mindbox("async", {
+                operation: "SubscriptionOnInternalPages",
+                data: t
+            })
+        } catch (tf) {}
+}
+;
+const Yi = {
+    async loadTranslations(e) {
+        const {groups: t, locale: i, clientId: s=Ni.clientId} = e;
+        try {
+            const e = Fi
+              , a = await fetch(e, {
+                method: "POST",
+                body: JSON.stringify({
+                    groups: t
+                }),
+                headers: {
+                    Authorization: "Bearer 6zLZ9jIz0b42uv1qHBBbP9sO105ExJUVEKIRGhh0ZrhW993bVvEbUSfoxhXnQ0fduyD7gAfCaEIO9XKU",
+                    clientId: s,
+                    "Accept-Language": i,
+                    "Content-Type": "application/json"
+                }
+            });
+            if (!a.ok)
+                throw new Error(`Failed to load translations: ${a.statusText}`);
+            return await a.json()
+        } catch (a) {
+            return {}
+        }
+    },
+    async loadGroups(e, ...t) {
+        return this.loadTranslations({
+            groups: t,
+            locale: e
+        })
+    }
+}
+  , Vi = j("i18n", () => {
+    const e = p({})
+      , t = p(new Set)
+      , i = p(!1)
+      , s = p(null)
+      , a = e => t.value.has(e);
+    return {
+        translations: y( () => e.value),
+        loadedGroups: y( () => Array.from(t.value)),
+        isLoading: y( () => i.value),
+        error: y( () => s.value),
+        isGroupLoaded: a,
+        loadGroups: async (r, n, o) => {
+            const l = n.filter(e => !a(e));
+            if (0 === l.length)
+                return;
+            i.value = !0,
+            s.value = null;
+            let c = o;
+            try {
+                return o || (c = await Yi.loadTranslations({
+                    groups: l,
+                    locale: r
+                })),
+                e.value = {
+                    ...e.value,
+                    ...c
+
+--- MATCH 4, position 74482 ---
+
+            },
+                    area: {
+                        ids: {
+                            externalId: localStorage.selectedCityFromId
+                        }
+                    },
+                    subscriptions: [{
+                        brand: "FUNSUN",
+                        pointOfContact: "Email"
+                    }]
+                }
+            };
+            e.isTbank && (t.customer.PointOfContact = "tbank.fstravel.com"),
+            window.mindbox("async", {
+                operation: "SubscriptionOnInternalPages",
+                data: t
+            })
+        } catch (tf) {}
+}
+;
+const Yi = {
+    async loadTranslations(e) {
+        const {groups: t, locale: i, clientId: s=Ni.clientId} = e;
+        try {
+            const e = Fi
+              , a = await fetch(e, {
+                method: "POST",
+                body: JSON.stringify({
+                    groups: t
+                }),
+                headers: {
+                    Authorization: "Bearer 6zLZ9jIz0b42uv1qHBBbP9sO105ExJUVEKIRGhh0ZrhW993bVvEbUSfoxhXnQ0fduyD7gAfCaEIO9XKU",
+                    clientId: s,
+                    "Accept-Language": i,
+                    "Content-Type": "application/json"
+                }
+            });
+            if (!a.ok)
+                throw new Error(`Failed to load translations: ${a.statusText}`);
+            return await a.json()
+        } catch (a) {
+            return {}
+        }
+    },
+    async loadGroups(e, ...t) {
+        return this.loadTranslations({
+            groups: t,
+            locale: e
+        })
+    }
+}
+  , Vi = j("i18n", () => {
+    const e = p({})
+      , t = p(new Set)
+      , i = p(!1)
+      , s = p(null)
+      , a = e => t.value.has(e);
+    return {
+        translations: y( () => e.value),
+        loadedGroups: y( () => Array.from(t.value)),
+        isLoading: y( () => i.value),
+        error: y( () => s.value),
+        isGroupLoaded: a,
+        loadGroups: async (r, n, o) => {
+            const l = n.filter(e => !a(e));
+            if (0 === l.length)
+                return;
+            i.value = !0,
+            s.value = null;
+            let c = o;
+            try {
+                return o || (c = await Yi.loadTranslations({
+                    groups: l,
+                    locale: r
+                })),
+                e.value = {
+                    ...e.value,
+                    ...c
+                },
+                l.forEach(e => t.value.add(e)),
+                c
+            } catch (u) {
+                s.value = u instanceof Error ? u.message : "Failed to load translations"
+            } finally {
+                i.value = !1
+            }
+        }
+        ,
+        getTranslation: (t, i) => e.value?.footerUi ? function(e, t, i="") {
+            const s = t.split(".");
+            let a = e
+              , r = "";
+            return s.forEach(e => {
+                const t = a?.[e];
+                "string" != typeof t ? typeof t < "u" && (a = t) : r = t
+            }
+            ),
+            r || i
+        }(e.value.footerUi, t, i) : i || "",
+        clearCache: () => {
+            e.value = {},
+            t.value.clear()
+        }
+        ,
+        clearGroup: i => {
+ 
+
+--- MATCH 5, position 74497 ---
+
+                    area: {
+                        ids: {
+                            externalId: localStorage.selectedCityFromId
+                        }
+                    },
+                    subscriptions: [{
+                        brand: "FUNSUN",
+                        pointOfContact: "Email"
+                    }]
+                }
+            };
+            e.isTbank && (t.customer.PointOfContact = "tbank.fstravel.com"),
+            window.mindbox("async", {
+                operation: "SubscriptionOnInternalPages",
+                data: t
+            })
+        } catch (tf) {}
+}
+;
+const Yi = {
+    async loadTranslations(e) {
+        const {groups: t, locale: i, clientId: s=Ni.clientId} = e;
+        try {
+            const e = Fi
+              , a = await fetch(e, {
+                method: "POST",
+                body: JSON.stringify({
+                    groups: t
+                }),
+                headers: {
+                    Authorization: "Bearer 6zLZ9jIz0b42uv1qHBBbP9sO105ExJUVEKIRGhh0ZrhW993bVvEbUSfoxhXnQ0fduyD7gAfCaEIO9XKU",
+                    clientId: s,
+                    "Accept-Language": i,
+                    "Content-Type": "application/json"
+                }
+            });
+            if (!a.ok)
+                throw new Error(`Failed to load translations: ${a.statusText}`);
+            return await a.json()
+        } catch (a) {
+            return {}
+        }
+    },
+    async loadGroups(e, ...t) {
+        return this.loadTranslations({
+            groups: t,
+            locale: e
+        })
+    }
+}
+  , Vi = j("i18n", () => {
+    const e = p({})
+      , t = p(new Set)
+      , i = p(!1)
+      , s = p(null)
+      , a = e => t.value.has(e);
+    return {
+        translations: y( () => e.value),
+        loadedGroups: y( () => Array.from(t.value)),
+        isLoading: y( () => i.value),
+        error: y( () => s.value),
+        isGroupLoaded: a,
+        loadGroups: async (r, n, o) => {
+            const l = n.filter(e => !a(e));
+            if (0 === l.length)
+                return;
+            i.value = !0,
+            s.value = null;
+            let c = o;
+            try {
+                return o || (c = await Yi.loadTranslations({
+                    groups: l,
+                    locale: r
+                })),
+                e.value = {
+                    ...e.value,
+                    ...c
+                },
+                l.forEach(e => t.value.add(e)),
+                c
+            } catch (u) {
+                s.value = u instanceof Error ? u.message : "Failed to load translations"
+            } finally {
+                i.value = !1
+            }
+        }
+        ,
+        getTranslation: (t, i) => e.value?.footerUi ? function(e, t, i="") {
+            const s = t.split(".");
+            let a = e
+              , r = "";
+            return s.forEach(e => {
+                const t = a?.[e];
+                "string" != typeof t ? typeof t < "u" && (a = t) : r = t
+            }
+            ),
+            r || i
+        }(e.value.footerUi, t, i) : i || "",
+        clearCache: () => {
+            e.value = {},
+            t.value.clear()
+        }
+        ,
+        clearGroup: i => {
+            t.va
+
+--- MATCH 6, position 74882 ---
+
+&& (t.customer.PointOfContact = "tbank.fstravel.com"),
+            window.mindbox("async", {
+                operation: "SubscriptionOnInternalPages",
+                data: t
+            })
+        } catch (tf) {}
+}
+;
+const Yi = {
+    async loadTranslations(e) {
+        const {groups: t, locale: i, clientId: s=Ni.clientId} = e;
+        try {
+            const e = Fi
+              , a = await fetch(e, {
+                method: "POST",
+                body: JSON.stringify({
+                    groups: t
+                }),
+                headers: {
+                    Authorization: "Bearer 6zLZ9jIz0b42uv1qHBBbP9sO105ExJUVEKIRGhh0ZrhW993bVvEbUSfoxhXnQ0fduyD7gAfCaEIO9XKU",
+                    clientId: s,
+                    "Accept-Language": i,
+                    "Content-Type": "application/json"
+                }
+            });
+            if (!a.ok)
+                throw new Error(`Failed to load translations: ${a.statusText}`);
+            return await a.json()
+        } catch (a) {
+            return {}
+        }
+    },
+    async loadGroups(e, ...t) {
+        return this.loadTranslations({
+            groups: t,
+            locale: e
+        })
+    }
+}
+  , Vi = j("i18n", () => {
+    const e = p({})
+      , t = p(new Set)
+      , i = p(!1)
+      , s = p(null)
+      , a = e => t.value.has(e);
+    return {
+        translations: y( () => e.value),
+        loadedGroups: y( () => Array.from(t.value)),
+        isLoading: y( () => i.value),
+        error: y( () => s.value),
+        isGroupLoaded: a,
+        loadGroups: async (r, n, o) => {
+            const l = n.filter(e => !a(e));
+            if (0 === l.length)
+                return;
+            i.value = !0,
+            s.value = null;
+            let c = o;
+            try {
+                return o || (c = await Yi.loadTranslations({
+                    groups: l,
+                    locale: r
+                })),
+                e.value = {
+                    ...e.value,
+                    ...c
+                },
+                l.forEach(e => t.value.add(e)),
+                c
+            } catch (u) {
+                s.value = u instanceof Error ? u.message : "Failed to load translations"
+            } finally {
+                i.value = !1
+            }
+        }
+        ,
+        getTranslation: (t, i) => e.value?.footerUi ? function(e, t, i="") {
+            const s = t.split(".");
+            let a = e
+              , r = "";
+            return s.forEach(e => {
+                const t = a?.[e];
+                "string" != typeof t ? typeof t < "u" && (a = t) : r = t
+            }
+            ),
+            r || i
+        }(e.value.footerUi, t, i) : i || "",
+        clearCache: () => {
+            e.value = {},
+            t.value.clear()
+        }
+        ,
+        clearGroup: i => {
+            t.value.delete(i),
+            Object.keys(e.value).forEach(t => {
+                t.startsWith(i) && delete e.value[t]
+            }
+            )
+        }
+    }
+}
+);
+const Wi = () => {
+    const e = p("ru")
+      , t = p(["ru"])
+      , i = Vi();
+    return {
+        locale: y( () => e.value),
+        availableLocales: y( () => t.value),
+        setLocale: async t => {
+            e.
+
+--- MATCH 7, position 224204 ---
+
+qa = e => new Promise(t => setTimeout(t, e))
+  , Za = j("ExchangeRate", () => {
+    const e = p([])
+      , t = p({
+        USD: [],
+        EUR: []
+    });
+    return {
+        currencyRates: e,
+        rateHistoryMap: t,
+        fetchCurrencyRate: async function() {
+            e.value = [];
+            const t = (new Date).toLocaleDateString("sv-SE")
+              , i = [];
+            if (!(typeof window > "u"))
+                return await Promise.all([2, 3].map(async e => {
+                    let s = 0
+                      , a = !1;
+                    for (; !a && s < 5; )
+                        try {
+                            const s = await zi({
+                                clientId: Ni.clientId,
+                                currencyFrom: 1,
+                                currencyTo: e,
+                                dateFrom: t,
+                                dateTo: t
+                            });
+                            i.push(s),
+                            a = !0
+                        } catch (r) {
+                            s++,
+                            s > 2 && await qa(300)
+                        }
+                }
+                )),
+                e.value = i.flatMap(e => e.currencyRates ?? []),
+                e.value
+        },
+        fetchCurrencyHistory: async function(e) {
+            if (t.value[e]?.length)
+                return;
+            const i = "USD" === e ? 2 : 3
+              , s = new Date;
+            s.setHours(0, 0, 0, 0);
+            const a = new Date(s);
+            a.setDate(a.getDate() - 30);
+            const r = s.toLocaleDateString("sv-SE")
+              , n = a.toLocaleDateString("sv-SE");
+            try {
+                const s = ((await zi({
+                    clientId: Ni.clientId,
+                    currencyFrom: 1,
+                    currencyTo: i,
+                    dateFrom: n,
+                    dateTo: r
+                })).currencyRates || []).reverse();
+                t.value[e] = s
+            } catch (o) {}
+        },
+        setCurrencyRate: function(t) {
+            e.value = t
+        }
+    }
+}
+);
+function Ja(e) {
+    return e + .5 | 0
+}
+const Ka = (e, t, i) => Math.max(Math.min(e, i), t);
+function Qa(e) {
+    return Ka(Ja(2.55 * e), 0, 255)
+}
+function $a(e) {
+    return Ka(Ja(255 * e), 0, 255)
+}
+function er(e) {
+    return Ka(Ja(e / 2.55) / 100, 0, 1)
+}
+function tr(e) {
+    return Ka(Ja(100 * e), 0, 100)
+}
+const ir = {
+    0: 0,
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
+    A: 10,
+    B: 11,
+    C: 12,
+    D: 13,
+    E: 14,
+    F: 15,
+    a: 10,
+    b: 11,
+    c: 12,
+    d: 13,
+    e: 14,
+    f: 15
+}
+  , sr = [..."0123456789ABCDEF"]
+  , ar = e => sr[15 & e]
+  , rr = e => sr[(240 & e) >> 4] + sr[15 & e]
+  , nr = e => (240 & e) >> 4 == (15 & e);
+function or(e) {
+    var t = (e => nr(e.r) && nr(e.g) && nr(e.b) && nr(e.a))(e) ? ar : rr;
+    return e ? "#" + t(e.r) + t(e.g) + t(e.b) + ( (e, t) => e < 255 ? t(e) : "")(e.a, t) : void 0
+}
+const lr = /^(hsla?|hwb|hsv)\(\s*([-+.e\d]+)(?:deg)?[\s,]+([-+.e\d]+)%[\s,]+([-+.e\d]+)%(?:[\s,]+([-+.e\d]+)(%)?)?\s*\)$/;
+function cr(e, t, i) {
+    const s = t * Ma
+
+--- MATCH 8, position 224217 ---
+
+ Promise(t => setTimeout(t, e))
+  , Za = j("ExchangeRate", () => {
+    const e = p([])
+      , t = p({
+        USD: [],
+        EUR: []
+    });
+    return {
+        currencyRates: e,
+        rateHistoryMap: t,
+        fetchCurrencyRate: async function() {
+            e.value = [];
+            const t = (new Date).toLocaleDateString("sv-SE")
+              , i = [];
+            if (!(typeof window > "u"))
+                return await Promise.all([2, 3].map(async e => {
+                    let s = 0
+                      , a = !1;
+                    for (; !a && s < 5; )
+                        try {
+                            const s = await zi({
+                                clientId: Ni.clientId,
+                                currencyFrom: 1,
+                                currencyTo: e,
+                                dateFrom: t,
+                                dateTo: t
+                            });
+                            i.push(s),
+                            a = !0
+                        } catch (r) {
+                            s++,
+                            s > 2 && await qa(300)
+                        }
+                }
+                )),
+                e.value = i.flatMap(e => e.currencyRates ?? []),
+                e.value
+        },
+        fetchCurrencyHistory: async function(e) {
+            if (t.value[e]?.length)
+                return;
+            const i = "USD" === e ? 2 : 3
+              , s = new Date;
+            s.setHours(0, 0, 0, 0);
+            const a = new Date(s);
+            a.setDate(a.getDate() - 30);
+            const r = s.toLocaleDateString("sv-SE")
+              , n = a.toLocaleDateString("sv-SE");
+            try {
+                const s = ((await zi({
+                    clientId: Ni.clientId,
+                    currencyFrom: 1,
+                    currencyTo: i,
+                    dateFrom: n,
+                    dateTo: r
+                })).currencyRates || []).reverse();
+                t.value[e] = s
+            } catch (o) {}
+        },
+        setCurrencyRate: function(t) {
+            e.value = t
+        }
+    }
+}
+);
+function Ja(e) {
+    return e + .5 | 0
+}
+const Ka = (e, t, i) => Math.max(Math.min(e, i), t);
+function Qa(e) {
+    return Ka(Ja(2.55 * e), 0, 255)
+}
+function $a(e) {
+    return Ka(Ja(255 * e), 0, 255)
+}
+function er(e) {
+    return Ka(Ja(e / 2.55) / 100, 0, 1)
+}
+function tr(e) {
+    return Ka(Ja(100 * e), 0, 100)
+}
+const ir = {
+    0: 0,
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
+    A: 10,
+    B: 11,
+    C: 12,
+    D: 13,
+    E: 14,
+    F: 15,
+    a: 10,
+    b: 11,
+    c: 12,
+    d: 13,
+    e: 14,
+    f: 15
+}
+  , sr = [..."0123456789ABCDEF"]
+  , ar = e => sr[15 & e]
+  , rr = e => sr[(240 & e) >> 4] + sr[15 & e]
+  , nr = e => (240 & e) >> 4 == (15 & e);
+function or(e) {
+    var t = (e => nr(e.r) && nr(e.g) && nr(e.b) && nr(e.a))(e) ? ar : rr;
+    return e ? "#" + t(e.r) + t(e.g) + t(e.b) + ( (e, t) => e < 255 ? t(e) : "")(e.a, t) : void 0
+}
+const lr = /^(hsla?|hwb|hsv)\(\s*([-+.e\d]+)(?:deg)?[\s,]+([-+.e\d]+)%[\s,]+([-+.e\d]+)%(?:[\s,]+([-+.e\d]+)(%)?)?\s*\)$/;
+function cr(e, t, i) {
+    const s = t * Math.min(i, 1 -
+
+--- MATCH 9, position 225276 ---
+
+      s++,
+                            s > 2 && await qa(300)
+                        }
+                }
+                )),
+                e.value = i.flatMap(e => e.currencyRates ?? []),
+                e.value
+        },
+        fetchCurrencyHistory: async function(e) {
+            if (t.value[e]?.length)
+                return;
+            const i = "USD" === e ? 2 : 3
+              , s = new Date;
+            s.setHours(0, 0, 0, 0);
+            const a = new Date(s);
+            a.setDate(a.getDate() - 30);
+            const r = s.toLocaleDateString("sv-SE")
+              , n = a.toLocaleDateString("sv-SE");
+            try {
+                const s = ((await zi({
+                    clientId: Ni.clientId,
+                    currencyFrom: 1,
+                    currencyTo: i,
+                    dateFrom: n,
+                    dateTo: r
+                })).currencyRates || []).reverse();
+                t.value[e] = s
+            } catch (o) {}
+        },
+        setCurrencyRate: function(t) {
+            e.value = t
+        }
+    }
+}
+);
+function Ja(e) {
+    return e + .5 | 0
+}
+const Ka = (e, t, i) => Math.max(Math.min(e, i), t);
+function Qa(e) {
+    return Ka(Ja(2.55 * e), 0, 255)
+}
+function $a(e) {
+    return Ka(Ja(255 * e), 0, 255)
+}
+function er(e) {
+    return Ka(Ja(e / 2.55) / 100, 0, 1)
+}
+function tr(e) {
+    return Ka(Ja(100 * e), 0, 100)
+}
+const ir = {
+    0: 0,
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
+    A: 10,
+    B: 11,
+    C: 12,
+    D: 13,
+    E: 14,
+    F: 15,
+    a: 10,
+    b: 11,
+    c: 12,
+    d: 13,
+    e: 14,
+    f: 15
+}
+  , sr = [..."0123456789ABCDEF"]
+  , ar = e => sr[15 & e]
+  , rr = e => sr[(240 & e) >> 4] + sr[15 & e]
+  , nr = e => (240 & e) >> 4 == (15 & e);
+function or(e) {
+    var t = (e => nr(e.r) && nr(e.g) && nr(e.b) && nr(e.a))(e) ? ar : rr;
+    return e ? "#" + t(e.r) + t(e.g) + t(e.b) + ( (e, t) => e < 255 ? t(e) : "")(e.a, t) : void 0
+}
+const lr = /^(hsla?|hwb|hsv)\(\s*([-+.e\d]+)(?:deg)?[\s,]+([-+.e\d]+)%[\s,]+([-+.e\d]+)%(?:[\s,]+([-+.e\d]+)(%)?)?\s*\)$/;
+function cr(e, t, i) {
+    const s = t * Math.min(i, 1 - i)
+      , a = (t, a=(t + e / 30) % 12) => i - s * Math.max(Math.min(a - 3, 9 - a, 1), -1);
+    return [a(0), a(8), a(4)]
+}
+function ur(e, t, i) {
+    const s = (s, a=(s + e / 60) % 6) => i - i * t * Math.max(Math.min(a, 4 - a, 1), 0);
+    return [s(5), s(3), s(1)]
+}
+function dr(e, t, i) {
+    const s = cr(e, 1, .5);
+    let a;
+    for (t + i > 1 && (a = 1 / (t + i),
+    t *= a,
+    i *= a),
+    a = 0; a < 3; a++)
+        s[a] *= 1 - t - i,
+        s[a] += t;
+    return s
+}
+function hr(e) {
+    const t = e.r / 255
+      , i = e.g / 255
+      , s = e.b / 255
+      , a = Math.max(t, i, s)
+      , r = Math.min(t, i, s)
+      , n = (a + r) / 2;
+    let o, l, c;
+    return a !== r && (c = a - r,
+    l = n > .5 ? c / (2 - a - r) : c / (a + r),
+    o = function(e, t, i, s, a) {
+        return e === a ? (t - i) / s + (t < i ? 6 : 0) : t === a ? (i - e) / s + 2 : (e - t) / s + 4
+    }(t, i, s, c, a),
+    o = 60 * o + .5),
+    [0 | o, l || 0, n]
+}
+function pr(e, t, i, s) {
+    return (Array.isArray(t) ? e(t[0], t[1], t[2]) : e(t, i, s)).map($a)
+}
+funct
+
+--- MATCH 10, position 225289 ---
+
+                          s > 2 && await qa(300)
+                        }
+                }
+                )),
+                e.value = i.flatMap(e => e.currencyRates ?? []),
+                e.value
+        },
+        fetchCurrencyHistory: async function(e) {
+            if (t.value[e]?.length)
+                return;
+            const i = "USD" === e ? 2 : 3
+              , s = new Date;
+            s.setHours(0, 0, 0, 0);
+            const a = new Date(s);
+            a.setDate(a.getDate() - 30);
+            const r = s.toLocaleDateString("sv-SE")
+              , n = a.toLocaleDateString("sv-SE");
+            try {
+                const s = ((await zi({
+                    clientId: Ni.clientId,
+                    currencyFrom: 1,
+                    currencyTo: i,
+                    dateFrom: n,
+                    dateTo: r
+                })).currencyRates || []).reverse();
+                t.value[e] = s
+            } catch (o) {}
+        },
+        setCurrencyRate: function(t) {
+            e.value = t
+        }
+    }
+}
+);
+function Ja(e) {
+    return e + .5 | 0
+}
+const Ka = (e, t, i) => Math.max(Math.min(e, i), t);
+function Qa(e) {
+    return Ka(Ja(2.55 * e), 0, 255)
+}
+function $a(e) {
+    return Ka(Ja(255 * e), 0, 255)
+}
+function er(e) {
+    return Ka(Ja(e / 2.55) / 100, 0, 1)
+}
+function tr(e) {
+    return Ka(Ja(100 * e), 0, 100)
+}
+const ir = {
+    0: 0,
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
+    A: 10,
+    B: 11,
+    C: 12,
+    D: 13,
+    E: 14,
+    F: 15,
+    a: 10,
+    b: 11,
+    c: 12,
+    d: 13,
+    e: 14,
+    f: 15
+}
+  , sr = [..."0123456789ABCDEF"]
+  , ar = e => sr[15 & e]
+  , rr = e => sr[(240 & e) >> 4] + sr[15 & e]
+  , nr = e => (240 & e) >> 4 == (15 & e);
+function or(e) {
+    var t = (e => nr(e.r) && nr(e.g) && nr(e.b) && nr(e.a))(e) ? ar : rr;
+    return e ? "#" + t(e.r) + t(e.g) + t(e.b) + ( (e, t) => e < 255 ? t(e) : "")(e.a, t) : void 0
+}
+const lr = /^(hsla?|hwb|hsv)\(\s*([-+.e\d]+)(?:deg)?[\s,]+([-+.e\d]+)%[\s,]+([-+.e\d]+)%(?:[\s,]+([-+.e\d]+)(%)?)?\s*\)$/;
+function cr(e, t, i) {
+    const s = t * Math.min(i, 1 - i)
+      , a = (t, a=(t + e / 30) % 12) => i - s * Math.max(Math.min(a - 3, 9 - a, 1), -1);
+    return [a(0), a(8), a(4)]
+}
+function ur(e, t, i) {
+    const s = (s, a=(s + e / 60) % 6) => i - i * t * Math.max(Math.min(a, 4 - a, 1), 0);
+    return [s(5), s(3), s(1)]
+}
+function dr(e, t, i) {
+    const s = cr(e, 1, .5);
+    let a;
+    for (t + i > 1 && (a = 1 / (t + i),
+    t *= a,
+    i *= a),
+    a = 0; a < 3; a++)
+        s[a] *= 1 - t - i,
+        s[a] += t;
+    return s
+}
+function hr(e) {
+    const t = e.r / 255
+      , i = e.g / 255
+      , s = e.b / 255
+      , a = Math.max(t, i, s)
+      , r = Math.min(t, i, s)
+      , n = (a + r) / 2;
+    let o, l, c;
+    return a !== r && (c = a - r,
+    l = n > .5 ? c / (2 - a - r) : c / (a + r),
+    o = function(e, t, i, s, a) {
+        return e === a ? (t - i) / s + (t < i ? 6 : 0) : t === a ? (i - e) / s + 2 : (e - t) / s + 4
+    }(t, i, s, c, a),
+    o = 60 * o + .5),
+    [0 | o, l || 0, n]
+}
+function pr(e, t, i, s) {
+    return (Array.isArray(t) ? e(t[0], t[1], t[2]) : e(t, i, s)).map($a)
+}
+function fr(e, t, 
+
+... further matches skipped ...
+
+====================================================================================================
+SEARCH: currencyFrom
+
+--- MATCH 1, position 224259 ---
+
+("ExchangeRate", () => {
+    const e = p([])
+      , t = p({
+        USD: [],
+        EUR: []
+    });
+    return {
+        currencyRates: e,
+        rateHistoryMap: t,
+        fetchCurrencyRate: async function() {
+            e.value = [];
+            const t = (new Date).toLocaleDateString("sv-SE")
+              , i = [];
+            if (!(typeof window > "u"))
+                return await Promise.all([2, 3].map(async e => {
+                    let s = 0
+                      , a = !1;
+                    for (; !a && s < 5; )
+                        try {
+                            const s = await zi({
+                                clientId: Ni.clientId,
+                                currencyFrom: 1,
+                                currencyTo: e,
+                                dateFrom: t,
+                                dateTo: t
+                            });
+                            i.push(s),
+                            a = !0
+                        } catch (r) {
+                            s++,
+                            s > 2 && await qa(300)
+                        }
+                }
+                )),
+                e.value = i.flatMap(e => e.currencyRates ?? []),
+                e.value
+        },
+        fetchCurrencyHistory: async function(e) {
+            if (t.value[e]?.length)
+                return;
+            const i = "USD" === e ? 2 : 3
+              , s = new Date;
+            s.setHours(0, 0, 0, 0);
+            const a = new Date(s);
+            a.setDate(a.getDate() - 30);
+            const r = s.toLocaleDateString("sv-SE")
+              , n = a.toLocaleDateString("sv-SE");
+            try {
+                const s = ((await zi({
+                    clientId: Ni.clientId,
+                    currencyFrom: 1,
+                    currencyTo: i,
+                    dateFrom: n,
+                    dateTo: r
+                })).currencyRates || []).reverse();
+                t.value[e] = s
+            } catch (o) {}
+        },
+        setCurrencyRate: function(t) {
+            e.value = t
+        }
+    }
+}
+);
+function Ja(e) {
+    return e + .5 | 0
+}
+const Ka = (e, t, i) => Math.max(Math.min(e, i), t);
+function Qa(e) {
+    return Ka(Ja(2.55 * e), 0, 255)
+}
+function $a(e) {
+    return Ka(Ja(255 * e), 0, 255)
+}
+function er(e) {
+    return Ka(Ja(e / 2.55) / 100, 0, 1)
+}
+function tr(e) {
+    return Ka(Ja(100 * e), 0, 100)
+}
+const ir = {
+    0: 0,
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
+    A: 10,
+    B: 11,
+    C: 12,
+    D: 13,
+    E: 14,
+    F: 15,
+    a: 10,
+    b: 11,
+    c: 12,
+    d: 13,
+    e: 14,
+    f: 15
+}
+  , sr = [..."0123456789ABCDEF"]
+  , ar = e => sr[15 & e]
+  , rr = e => sr[(240 & e) >> 4] + sr[15 & e]
+  , nr = e => (240 & e) >> 4 == (15 & e);
+function or(e) {
+    var t = (e => nr(e.r) && nr(e.g) && nr(e.b) && nr(e.a))(e) ? ar : rr;
+    return e ? "#" + t(e.r) + t(e.g) + t(e.b) + ( (e, t) => e < 255 ? t(e) : "")(e.a, t) : void 0
+}
+const lr = /^(hsla?|hwb|hsv)\(\s*([-+.e\d]+)(?:deg)?[\s,]+([-+.e\d]+)%[\s,]+([-+.e\d]+)%(?:[\s,]+([-+.e\d]+)(%)?)?\s*\)$/;
+function cr(e, t, i) {
+    const s = t * Math.min(i, 1 - i)
+      , a = (t, a=(t + e / 30) % 12) =
+
+--- MATCH 2, position 225319 ---
+
+2 && await qa(300)
+                        }
+                }
+                )),
+                e.value = i.flatMap(e => e.currencyRates ?? []),
+                e.value
+        },
+        fetchCurrencyHistory: async function(e) {
+            if (t.value[e]?.length)
+                return;
+            const i = "USD" === e ? 2 : 3
+              , s = new Date;
+            s.setHours(0, 0, 0, 0);
+            const a = new Date(s);
+            a.setDate(a.getDate() - 30);
+            const r = s.toLocaleDateString("sv-SE")
+              , n = a.toLocaleDateString("sv-SE");
+            try {
+                const s = ((await zi({
+                    clientId: Ni.clientId,
+                    currencyFrom: 1,
+                    currencyTo: i,
+                    dateFrom: n,
+                    dateTo: r
+                })).currencyRates || []).reverse();
+                t.value[e] = s
+            } catch (o) {}
+        },
+        setCurrencyRate: function(t) {
+            e.value = t
+        }
+    }
+}
+);
+function Ja(e) {
+    return e + .5 | 0
+}
+const Ka = (e, t, i) => Math.max(Math.min(e, i), t);
+function Qa(e) {
+    return Ka(Ja(2.55 * e), 0, 255)
+}
+function $a(e) {
+    return Ka(Ja(255 * e), 0, 255)
+}
+function er(e) {
+    return Ka(Ja(e / 2.55) / 100, 0, 1)
+}
+function tr(e) {
+    return Ka(Ja(100 * e), 0, 100)
+}
+const ir = {
+    0: 0,
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
+    A: 10,
+    B: 11,
+    C: 12,
+    D: 13,
+    E: 14,
+    F: 15,
+    a: 10,
+    b: 11,
+    c: 12,
+    d: 13,
+    e: 14,
+    f: 15
+}
+  , sr = [..."0123456789ABCDEF"]
+  , ar = e => sr[15 & e]
+  , rr = e => sr[(240 & e) >> 4] + sr[15 & e]
+  , nr = e => (240 & e) >> 4 == (15 & e);
+function or(e) {
+    var t = (e => nr(e.r) && nr(e.g) && nr(e.b) && nr(e.a))(e) ? ar : rr;
+    return e ? "#" + t(e.r) + t(e.g) + t(e.b) + ( (e, t) => e < 255 ? t(e) : "")(e.a, t) : void 0
+}
+const lr = /^(hsla?|hwb|hsv)\(\s*([-+.e\d]+)(?:deg)?[\s,]+([-+.e\d]+)%[\s,]+([-+.e\d]+)%(?:[\s,]+([-+.e\d]+)(%)?)?\s*\)$/;
+function cr(e, t, i) {
+    const s = t * Math.min(i, 1 - i)
+      , a = (t, a=(t + e / 30) % 12) => i - s * Math.max(Math.min(a - 3, 9 - a, 1), -1);
+    return [a(0), a(8), a(4)]
+}
+function ur(e, t, i) {
+    const s = (s, a=(s + e / 60) % 6) => i - i * t * Math.max(Math.min(a, 4 - a, 1), 0);
+    return [s(5), s(3), s(1)]
+}
+function dr(e, t, i) {
+    const s = cr(e, 1, .5);
+    let a;
+    for (t + i > 1 && (a = 1 / (t + i),
+    t *= a,
+    i *= a),
+    a = 0; a < 3; a++)
+        s[a] *= 1 - t - i,
+        s[a] += t;
+    return s
+}
+function hr(e) {
+    const t = e.r / 255
+      , i = e.g / 255
+      , s = e.b / 255
+      , a = Math.max(t, i, s)
+      , r = Math.min(t, i, s)
+      , n = (a + r) / 2;
+    let o, l, c;
+    return a !== r && (c = a - r,
+    l = n > .5 ? c / (2 - a - r) : c / (a + r),
+    o = function(e, t, i, s, a) {
+        return e === a ? (t - i) / s + (t < i ? 6 : 0) : t === a ? (i - e) / s + 2 : (e - t) / s + 4
+    }(t, i, s, c, a),
+    o = 60 * o + .5),
+    [0 | o, l || 0, n]
+}
+function pr(e, t, i, s) {
+    return (Array.isArray(t) ? e(t[0], t[1], t[2]) : e(t, i, s)).map($a)
+}
+function fr(e, t, i) {
+    return pr(cr, e, t, i
+
+====================================================================================================
+SEARCH: currencyTo
+
+--- MATCH 1, position 224308 ---
+
+  , t = p({
+        USD: [],
+        EUR: []
+    });
+    return {
+        currencyRates: e,
+        rateHistoryMap: t,
+        fetchCurrencyRate: async function() {
+            e.value = [];
+            const t = (new Date).toLocaleDateString("sv-SE")
+              , i = [];
+            if (!(typeof window > "u"))
+                return await Promise.all([2, 3].map(async e => {
+                    let s = 0
+                      , a = !1;
+                    for (; !a && s < 5; )
+                        try {
+                            const s = await zi({
+                                clientId: Ni.clientId,
+                                currencyFrom: 1,
+                                currencyTo: e,
+                                dateFrom: t,
+                                dateTo: t
+                            });
+                            i.push(s),
+                            a = !0
+                        } catch (r) {
+                            s++,
+                            s > 2 && await qa(300)
+                        }
+                }
+                )),
+                e.value = i.flatMap(e => e.currencyRates ?? []),
+                e.value
+        },
+        fetchCurrencyHistory: async function(e) {
+            if (t.value[e]?.length)
+                return;
+            const i = "USD" === e ? 2 : 3
+              , s = new Date;
+            s.setHours(0, 0, 0, 0);
+            const a = new Date(s);
+            a.setDate(a.getDate() - 30);
+            const r = s.toLocaleDateString("sv-SE")
+              , n = a.toLocaleDateString("sv-SE");
+            try {
+                const s = ((await zi({
+                    clientId: Ni.clientId,
+                    currencyFrom: 1,
+                    currencyTo: i,
+                    dateFrom: n,
+                    dateTo: r
+                })).currencyRates || []).reverse();
+                t.value[e] = s
+            } catch (o) {}
+        },
+        setCurrencyRate: function(t) {
+            e.value = t
+        }
+    }
+}
+);
+function Ja(e) {
+    return e + .5 | 0
+}
+const Ka = (e, t, i) => Math.max(Math.min(e, i), t);
+function Qa(e) {
+    return Ka(Ja(2.55 * e), 0, 255)
+}
+function $a(e) {
+    return Ka(Ja(255 * e), 0, 255)
+}
+function er(e) {
+    return Ka(Ja(e / 2.55) / 100, 0, 1)
+}
+function tr(e) {
+    return Ka(Ja(100 * e), 0, 100)
+}
+const ir = {
+    0: 0,
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
+    A: 10,
+    B: 11,
+    C: 12,
+    D: 13,
+    E: 14,
+    F: 15,
+    a: 10,
+    b: 11,
+    c: 12,
+    d: 13,
+    e: 14,
+    f: 15
+}
+  , sr = [..."0123456789ABCDEF"]
+  , ar = e => sr[15 & e]
+  , rr = e => sr[(240 & e) >> 4] + sr[15 & e]
+  , nr = e => (240 & e) >> 4 == (15 & e);
+function or(e) {
+    var t = (e => nr(e.r) && nr(e.g) && nr(e.b) && nr(e.a))(e) ? ar : rr;
+    return e ? "#" + t(e.r) + t(e.g) + t(e.b) + ( (e, t) => e < 255 ? t(e) : "")(e.a, t) : void 0
+}
+const lr = /^(hsla?|hwb|hsv)\(\s*([-+.e\d]+)(?:deg)?[\s,]+([-+.e\d]+)%[\s,]+([-+.e\d]+)%(?:[\s,]+([-+.e\d]+)(%)?)?\s*\)$/;
+function cr(e, t, i) {
+    const s = t * Math.min(i, 1 - i)
+      , a = (t, a=(t + e / 30) % 12) => i - s * Math.max(Math.min(a - 3, 9 - a, 1), -1)
+
+--- MATCH 2, position 225356 ---
+
+      }
+                }
+                )),
+                e.value = i.flatMap(e => e.currencyRates ?? []),
+                e.value
+        },
+        fetchCurrencyHistory: async function(e) {
+            if (t.value[e]?.length)
+                return;
+            const i = "USD" === e ? 2 : 3
+              , s = new Date;
+            s.setHours(0, 0, 0, 0);
+            const a = new Date(s);
+            a.setDate(a.getDate() - 30);
+            const r = s.toLocaleDateString("sv-SE")
+              , n = a.toLocaleDateString("sv-SE");
+            try {
+                const s = ((await zi({
+                    clientId: Ni.clientId,
+                    currencyFrom: 1,
+                    currencyTo: i,
+                    dateFrom: n,
+                    dateTo: r
+                })).currencyRates || []).reverse();
+                t.value[e] = s
+            } catch (o) {}
+        },
+        setCurrencyRate: function(t) {
+            e.value = t
+        }
+    }
+}
+);
+function Ja(e) {
+    return e + .5 | 0
+}
+const Ka = (e, t, i) => Math.max(Math.min(e, i), t);
+function Qa(e) {
+    return Ka(Ja(2.55 * e), 0, 255)
+}
+function $a(e) {
+    return Ka(Ja(255 * e), 0, 255)
+}
+function er(e) {
+    return Ka(Ja(e / 2.55) / 100, 0, 1)
+}
+function tr(e) {
+    return Ka(Ja(100 * e), 0, 100)
+}
+const ir = {
+    0: 0,
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
+    A: 10,
+    B: 11,
+    C: 12,
+    D: 13,
+    E: 14,
+    F: 15,
+    a: 10,
+    b: 11,
+    c: 12,
+    d: 13,
+    e: 14,
+    f: 15
+}
+  , sr = [..."0123456789ABCDEF"]
+  , ar = e => sr[15 & e]
+  , rr = e => sr[(240 & e) >> 4] + sr[15 & e]
+  , nr = e => (240 & e) >> 4 == (15 & e);
+function or(e) {
+    var t = (e => nr(e.r) && nr(e.g) && nr(e.b) && nr(e.a))(e) ? ar : rr;
+    return e ? "#" + t(e.r) + t(e.g) + t(e.b) + ( (e, t) => e < 255 ? t(e) : "")(e.a, t) : void 0
+}
+const lr = /^(hsla?|hwb|hsv)\(\s*([-+.e\d]+)(?:deg)?[\s,]+([-+.e\d]+)%[\s,]+([-+.e\d]+)%(?:[\s,]+([-+.e\d]+)(%)?)?\s*\)$/;
+function cr(e, t, i) {
+    const s = t * Math.min(i, 1 - i)
+      , a = (t, a=(t + e / 30) % 12) => i - s * Math.max(Math.min(a - 3, 9 - a, 1), -1);
+    return [a(0), a(8), a(4)]
+}
+function ur(e, t, i) {
+    const s = (s, a=(s + e / 60) % 6) => i - i * t * Math.max(Math.min(a, 4 - a, 1), 0);
+    return [s(5), s(3), s(1)]
+}
+function dr(e, t, i) {
+    const s = cr(e, 1, .5);
+    let a;
+    for (t + i > 1 && (a = 1 / (t + i),
+    t *= a,
+    i *= a),
+    a = 0; a < 3; a++)
+        s[a] *= 1 - t - i,
+        s[a] += t;
+    return s
+}
+function hr(e) {
+    const t = e.r / 255
+      , i = e.g / 255
+      , s = e.b / 255
+      , a = Math.max(t, i, s)
+      , r = Math.min(t, i, s)
+      , n = (a + r) / 2;
+    let o, l, c;
+    return a !== r && (c = a - r,
+    l = n > .5 ? c / (2 - a - r) : c / (a + r),
+    o = function(e, t, i, s, a) {
+        return e === a ? (t - i) / s + (t < i ? 6 : 0) : t === a ? (i - e) / s + 2 : (e - t) / s + 4
+    }(t, i, s, c, a),
+    o = 60 * o + .5),
+    [0 | o, l || 0, n]
+}
+function pr(e, t, i, s) {
+    return (Array.isArray(t) ? e(t[0], t[1], t[2]) : e(t, i, s)).map($a)
+}
+function fr(e, t, i) {
+    return pr(cr, e, t, i)
+}
+function gr(e) {
+    return (e % 
